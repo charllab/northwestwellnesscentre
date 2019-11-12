@@ -1,0 +1,16 @@
+button, .btn {
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.35;
+    padding: 0.727272727rem $spacer;
+    font-size: 0.909090909rem;
+
+}
