@@ -14,3 +14,10 @@ button, .btn {
     font-size: 0.909090909rem;
 
 }
+
+.btn-xs-block {
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+        display: block;
+    }
+}
