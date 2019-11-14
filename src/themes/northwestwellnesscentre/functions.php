@@ -100,18 +100,8 @@ function register_acf_block_types()
         'keywords' => ['carousel, card'],
     ]);
     acf_register_block_type([
-        'name' => 'sproing-card-set',
-        'title' => __('Sproing Card Set'),
-        'description' => __('A Floating Card Set with Links.'),
-        'render_template' => 'includes/gutenburg/card-set.php',
-        'category' => 'formatting',
-        'supports' => array( 'align' => false ),
-        'icon' => 'welcome-widgets-menus',
-        'keywords' => ['card'],
-    ]);
-    acf_register_block_type([
         'name' => 'simple-center-block',
-        'title' => __('Simple Center Layout Block'),
+        'title' => __('Sproing Center Layout Block'),
         'description' => __('Simple Centered Title and Text Layout Block.'),
         'render_template' => 'includes/gutenburg/simple-center-layout.php',
         'category' => 'formatting',
