@@ -12,7 +12,6 @@ button, .btn {
     line-height: 1.35;
     padding: 0.727272727rem $spacer;
     font-size: 0.909090909rem;
-
 }
 
 .btn-xs-block {
@@ -20,4 +19,15 @@ button, .btn {
         width: 100%;
         display: block;
     }
+}
+
+.btn-inline {
+    color: inherit;
+    padding: 0;
+    min-width: none;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: $headings-color;
 }

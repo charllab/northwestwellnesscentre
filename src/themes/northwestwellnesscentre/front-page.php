@@ -22,7 +22,8 @@
             <div class="container py-4 py-md-7">
                 <div class="row">
                     <div class="col col-sm-8 offset-sm-2 col-lg-4 offset-lg-8">
-                        <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy Counseling</h2>
+                        <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy
+                            Counseling</h2>
                         <div class="d-sm-flex mt-150">
                             <a href="#" class="btn btn-primary btn-xs-block mb-1 mb-sm-0 mx-sm-50">Our Services</a>
                             <a href="#" class="btn btn-secondary btn-xs-block mx-sm-50">Watch Video</a>
@@ -39,7 +40,8 @@
             <div class="container py-4 py-md-7">
                 <div class="row">
                     <div class="col col-sm-8 offset-sm-2 col-lg-4 offset-lg-0">
-                        <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy Counseling</h2>
+                        <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy
+                            Counseling</h2>
                         <div class="d-sm-flex mt-150">
                             <a href="#" class="btn btn-primary btn-xs-block mb-1 mb-sm-0 mx-sm-50">Our Services</a>
                             <a href="#" class="btn btn-secondary btn-xs-block mx-sm-50">Watch Video</a>
@@ -55,11 +57,116 @@
                 <div class="row justify-content-center">
                     <div class="col col-sm-8 text-center">
                         <h2 class="h1">Health and Wellness Services in Grande Prairie and Grimshaw Alberta</h2>
-                        <p>Our experienced practitioners offer a complete range of health services including individualized care plans that promote optimal healing of the mind, body and spirit.</p>
+                        <p>Our experienced practitioners offer a complete range of health services including
+                            individualized care plans that promote optimal healing of the mind, body and spirit.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section>
+            <div class="container card-set--blue">
+                <!-- CARD DECK -->
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD DECK -->
+            </div>
+        </section>
+
+        <br>
+        <br>
+
+        <section>
+            <div class="container">
+                <!-- CARD DECK -->
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Card Title</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                quas.</p>
+                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD DECK -->
+            </div>
+        </section>
+
+
+        <br>
+        <br>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="card-set--blog">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Card Title</h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+                                        quas.</p>
+                                    <a class="btn btn-secondary" href="#">Continue Reading</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="card-set--img-bg">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Want to learn more about our heath and wellness services?</h3>
+                                    <p class="card-text">Learn about the latest services we are providing our patients and what to expect with your first visit.</p>
+                                    <a class="btn btn-light" href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
