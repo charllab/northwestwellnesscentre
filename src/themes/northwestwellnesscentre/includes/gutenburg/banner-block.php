@@ -1,15 +1,6 @@
 <?php
 // Create id attribute allowing for custom "anchor" value.
 $id = 'banner-carousel-' . $block['id'];
-if (!empty($block['anchor'])) {
-    $id = $block['anchor'];
-}
-$className = '';
-if (!empty($block['align'])) {
-    $className .= 'align' . $block['align'];
-}
-// Load value defaults.
-$post_objects = get_field('banners');
 ?>
 
 <?php if (is_admin()): ?>
@@ -20,72 +11,46 @@ $post_objects = get_field('banners');
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img"
                      aria-hidden="true" focusable="false"><path d="M0,0h24v24H0V0z" fill="none"></path><path
                         d="M19,4H5C3.89,4,3,4.9,3,6v12c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V6C21,4.9,20.11,4,19,4z M19,18H5V8h14V18z"></path></svg></span>Banner
-            Carousel
+            Block with Title, Text and Button Option
         </div>
     </div>
 
 <?php else: ?>
 
-    <div class="bg-carousel <?php echo esc_attr($className); ?>">
-        <div id="banner-carousel-<?php echo $id; ?>" class="carousel slide carousel-block__banner" data-ride="carousel">
-
-            <?php if (count($post_objects) > 1) { ?>
-                <ol class="carousel-indicators d-md-none">
-                    <?php $index = 1; ?>
-
-                    <?php foreach ($post_objects as $post): ?>
-                        <li data-target="#banner-carousel-<?php echo $id; ?>" data-slide-to="<?php echo $index - 1; ?>"
-                            class="<?php echo($index == 1 ? 'active' : ''); ?>"></li>
-                        <?php $index++; endforeach; ?>
-                </ol>
-            <?php } ?>
-
-            <div class="carousel-inner">
-
-                <?php $index = 1; ?>
-
-                <?php foreach ($post_objects as $post): ?>
-
-                    <div
-                        class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?>"
-                        style="background-image: url(<?php echo $post['banner_image']; ?>); background-position: <?php echo $post['image_position']; ?>">
-                        <div class="d-flex h-100">
-                            <div class="banner__color-overlay"></div>
-                            <div class="container py-3 py-md-1">
-                                <div class="row align-items-center h-100">
-                                    <div class="col-sm-9 offset-sm-1 col-xl-6 offset-xl-0">
-                                        <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
-                                        <?php if ($post['blurb']): ?>
-                                            <p class="lead text-primary d-none d-md-block"><?php echo $post['blurb']; ?></p>
-                                        <?php endif; ?>
-                                        <?php if ($post['button_text']): ?>
-                                            <a href="<?php echo $post['button_link']; ?>"
-                                               class="btn btn-primary"><?php echo $post['button_text']; ?></a>
-                                        <?php endif; ?>
-                                    </div>
+    <section class="bg-general bg-size-cover alignfull"
+             style="background-image: url(<?php the_field('full_banner_block_image'); ?>);">
+        <div class="container py-4 py-md-7">
+            <div class="row">
+                <div class="col <?php the_field('full_banner_block_layout'); ?>">
+                    <h2 class="h1 text-white text-center mb-0
+                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-8'): ?> text-md-left mb-0 mx-50<?php endif; ?>
+                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-0'): ?> text-md-left mb-0 mx-50<?php endif; ?>
+                        ">
+                        <?php the_field('full_banner_block_title'); ?>
+                    </h2>
+                    <?php if (have_rows('full_banner_block_buttons')):
+                        while (have_rows('full_banner_block_buttons')) : the_row();
+                            if (get_row_layout() == 'full_banner_block_single_button_layout'): ?>
+                                <div class="mt-150">
+                                    <a href="<?php the_sub_field('full_banner_block_single_button_layout_link'); ?>"
+                                       class="btn btn-primary btn-xs-block"><?php the_sub_field('full_banner_block_single_button_title'); ?></a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php $index++; endforeach; ?>
-
+                            <?php elseif (get_row_layout() == 'full_banner_block_two_button_layout'): ?>
+                                <div class="mt-50
+                                <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-6 offset-lg-3'): ?> text-center<?php endif; ?>
+                                ">
+                                    <a href="<?php the_sub_field('full_banner_block_two_button_layout_first_button_link'); ?>"
+                                       class="btn btn-primary btn-xs-block mb-1 mb-md-0 mx-sm-50 mt-1"><?php the_sub_field('full_banner_block_two_button_layout_first_button_title'); ?></a>
+                                    <a href="<?php the_sub_field('full_banner_block_two_button_layout_second_button_link'); ?>"
+                                       class="btn btn-secondary btn-xs-block mx-sm-50 mt-1"><?php the_sub_field('full_banner_block_two_button_layout_second_button_title'); ?></a>
+                                </div>
+                            <?php endif; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
             </div>
-
-            <?php if (count($post_objects) > 1) { ?>
-                <a class="carousel-control-prev" href="#banner-carousel-<?php echo $id; ?>" role="button"
-                   data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#banner-carousel-<?php echo $id; ?>" role="button"
-                   data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            <?php } ?>
         </div>
-    </div>
-
+    </section>
 
     <?php wp_reset_postdata(); ?>
 

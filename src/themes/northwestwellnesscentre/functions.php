@@ -84,6 +84,7 @@ function register_acf_block_types()
         'description' => __('Simple Image and Text Banner with Optional Buttons.'),
         'render_template' => 'includes/gutenburg/banner-block.php',
         'category' => 'formatting',
+        'supports' => array( 'align' => false ),
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['banner'],
         'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/block-styles.css',
@@ -94,6 +95,7 @@ function register_acf_block_types()
         'description' => __('A Rotating Card Carousel with Links.'),
         'render_template' => 'includes/gutenburg/card-carousel.php',
         'category' => 'formatting',
+        'supports' => array( 'align' => false ),
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['carousel, card'],
     ]);

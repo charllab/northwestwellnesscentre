@@ -3,6 +3,16 @@ body {
     min-width: 320px;
 }
 
+// general
+
+.bg-size-cover {
+    background-size: cover;
+}
+.bg-general {
+    background-color: $general;
+}
+
+
 .section {
     position: relative;
     width: 100%;
@@ -78,7 +88,7 @@ body {
 
 .card-set--blog {
     .card {
-        background-color: rgba($headings-color, .1);
+        background-color: $soft;
         box-shadow: none;
     }
 }

@@ -1,5 +1,6 @@
 button, .btn {
     cursor: pointer;
+    white-space: normal;
     &:focus {
         outline: none;
     }
