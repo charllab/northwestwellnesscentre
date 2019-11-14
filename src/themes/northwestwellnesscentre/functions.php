@@ -63,6 +63,16 @@ add_filter('gform_init_scripts_footer', '__return_true');
 add_filter('gform_confirmation_anchor', '__return_false');
 //add_filter('gform_enable_field_label_visibility_settings', '__return_true');
 
+
+/* Enables the Excerpt meta box in Page edit screen. */
+function wpcodex_add_excerpt_support_for_pages()
+{
+    add_post_type_support('page', 'excerpt');
+}
+
+add_action('init', 'wpcodex_add_excerpt_support_for_pages');
+
+
 /* ACF - Theme Options */
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page([

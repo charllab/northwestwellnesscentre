@@ -57,7 +57,8 @@
                 <div class="row justify-content-center">
                     <div class="col col-sm-8 text-center">
                         <h2 class="h1">Health and Wellness Services in Grande Prairie and Grimshaw Alberta</h2>
-                        <p class="mb-0">Our experienced practitioners offer a complete range of health services including
+                        <p class="mb-0">Our experienced practitioners offer a complete range of health services
+                            including
                             individualized care plans that promote optimal healing of the mind, body and spirit.</p>
                         <a href="#" class="btn btn-primary btn-xs-block mt-150 mb-sm-0 mx-sm-50">Make An Appointment</a>
                     </div>
@@ -134,6 +135,42 @@
             </div>
         </section>
 
+        <section>
+            <div class="container card-set--blue">
+                <!-- CARD DECK -->
+                <div class="card-deck">
+
+                    <?php
+                    // Init args
+                    $args = [
+                        'post_parent' => 21,
+                        'post_type' => 'page',
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+
+                    ];
+
+                    $wp_query = new WP_Query($args);
+
+                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title"><?php the_title(); ?></h3>
+                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+
+                    <?php wp_reset_query(); ?>
+
+                </div>
+                <!-- CARD DECK -->
+            </div>
+        </section>
+
 
         <br>
         <br>
@@ -157,8 +194,10 @@
                         <div class="card-set--img-bg">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Want to learn more about our heath and wellness services?</h3>
-                                    <p class="card-text">Learn about the latest services we are providing our patients and what to expect with your first visit.</p>
+                                    <h3 class="card-title">Want to learn more about our heath and wellness
+                                        services?</h3>
+                                    <p class="card-text">Learn about the latest services we are providing our patients
+                                        and what to expect with your first visit.</p>
                                     <a class="btn btn-light" href="#">Learn More</a>
                                 </div>
                             </div>
