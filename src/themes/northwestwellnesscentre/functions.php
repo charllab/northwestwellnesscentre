@@ -71,3 +71,51 @@ if (function_exists('acf_add_options_page')) {
         'redirect' => false
     ]);
 }
+
+/* AX - Gutenberg Blocks */
+function register_acf_block_types()
+{
+    acf_register_block_type([
+        'name' => 'sproing-banner-block',
+        'title' => __('Sproing Banner Block'),
+        'description' => __('Simple Image and Text Banner with Optional Buttons.'),
+        'render_template' => 'includes/gutenburg/banner-block.php',
+        'category' => 'formatting',
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['banner'],
+        'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/block-styles.css',
+    ]);
+    acf_register_block_type([
+        'name' => 'sproing-card-carousel',
+        'title' => __('Sproing Card Carousel'),
+        'description' => __('A Rotating Card Carousel with Links.'),
+        'render_template' => 'includes/gutenburg/card-carousel.php',
+        'category' => 'formatting',
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['carousel, card'],
+    ]);
+    acf_register_block_type([
+        'name' => 'sproing-card-set',
+        'title' => __('Sproing Card Set'),
+        'description' => __('A Floating Card Set with Links.'),
+        'render_template' => 'includes/gutenburg/card-set.php',
+        'category' => 'formatting',
+        'supports' => array( 'align' => false ),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['card'],
+    ]);
+    acf_register_block_type([
+        'name' => 'simple-center-block',
+        'title' => __('Simple Center Layout Block'),
+        'description' => __('A simple center based layout block.'),
+        'render_template' => 'includes/gutenburg/simple-center-layout.php',
+        'category' => 'formatting',
+        'supports' => array( 'align' => false ),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
+}
+
+if (function_exists('acf_register_block_type')) {
+    add_action('acf/init', 'register_acf_block_types');
+}
