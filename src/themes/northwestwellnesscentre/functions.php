@@ -45,6 +45,9 @@ if (!function_exists('custom_after_setup_theme')) {
         // Style Gutenberg
         add_theme_support('editor-styles');
         add_editor_style('style-editor.css');
+
+        // Enable wide alignment for Gutenberg
+        add_theme_support( 'align-wide' );
     }
 }
 
@@ -107,7 +110,7 @@ function register_acf_block_types()
     acf_register_block_type([
         'name' => 'simple-center-block',
         'title' => __('Simple Center Layout Block'),
-        'description' => __('A simple center based layout block.'),
+        'description' => __('Simple Centered Title and Text Layout Block.'),
         'render_template' => 'includes/gutenburg/simple-center-layout.php',
         'category' => 'formatting',
         'supports' => array( 'align' => false ),

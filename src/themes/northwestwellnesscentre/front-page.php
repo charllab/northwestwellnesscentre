@@ -57,8 +57,9 @@
                 <div class="row justify-content-center">
                     <div class="col col-sm-8 text-center">
                         <h2 class="h1">Health and Wellness Services in Grande Prairie and Grimshaw Alberta</h2>
-                        <p>Our experienced practitioners offer a complete range of health services including
+                        <p class="mb-0">Our experienced practitioners offer a complete range of health services including
                             individualized care plans that promote optimal healing of the mind, body and spirit.</p>
+                        <a href="#" class="btn btn-primary btn-xs-block mt-150 mb-sm-0 mx-sm-50">Make An Appointment</a>
                     </div>
                 </div>
             </div>

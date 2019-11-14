@@ -98,3 +98,12 @@ body {
         color: inherit;
     }
 }
+
+// gutenberg styling
+
+.alignfull {
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    max-width: 100vw;
+    margin-bottom: 0;
+}

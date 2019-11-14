@@ -14,7 +14,7 @@ $post_objects = get_field('banners');
 
 <?php if (is_admin()): ?>
 
-    <div class="components-placeholder wp-testimonial-carousel">
+    <div class="components-placeholder sproing-block-wrapper">
         <div class="components-placeholder__label">
             <span class="editor-block-icon block-editor-block-icon has-colors">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img"

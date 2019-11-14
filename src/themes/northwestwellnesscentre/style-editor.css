@@ -12,36 +12,8 @@ body {
     max-width: 1166px;
 }
 
-/* Gutenberg styling examples: https://css-tricks.com/styling-the-gutenberg-columns-block */
-
-/*
-.wp-block-columns {
-   display: flex;
-   margin: 20px 0;
+/* Width of "full-wide" blocks - you need some CSS wizardry to get these blocks to extend outside the wrapper */
+.wp-block[data-align="full"] {
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.wp-block-column {
-    flex: 1;
-    margin: 0 20px;
-}
-
-@media (max-width: 764px) {
-    .wp-block-columns.has-3-columns {
-        flex-flow: row wrap;
-    }
-
-    .has-3-columns .wp-block-column:first-child {
-        flex-basis: 100%;
-    }
-}
-
-@media (max-width: 478px) {
-    .wp-block-columns.has-3-columns {
-        display: block;
-    }
-
-    .wp-block-column {
-        margin: 20px 0;
-    }
-}
-*/
