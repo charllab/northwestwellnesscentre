@@ -137,15 +137,15 @@
 
         <?php $featured_services = get_field('featured_services');
         if ($featured_services):
-            $posts = $featured_services;
+            $services = $featured_services;
             ?>
             <ul>
-                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <?php foreach( $services as $post): // variable must be called $post (IMPORTANT) ?>
                     <?php setup_postdata($post); ?>
                     <li>
-                        <h2 class="h1"><?php the_title(); ?></h2>
+                        <h2 class="h1"><?php echo get_the_title( $post->ID ); ?></h2>
                         <p><?php the_field('card_excerpt', $post); ?></p>
-                        <a href="<?php the_permalink(); ?>">Read More</a>
+                        <a href="<?php echo get_the_permalink($post->ID); ?>">Read More</a>
                     </li>
                 <?php endforeach; ?>
             </ul>

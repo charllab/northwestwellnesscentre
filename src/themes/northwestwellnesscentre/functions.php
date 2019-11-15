@@ -1,8 +1,8 @@
 <?php
 /* Require Includes */
-include_once get_template_directory().'/includes/gutenburg.php';
-include_once get_template_directory().'/includes/helper-functions.php';
-include_once get_template_directory().'/includes/bootstrap-wp-navwalker.php';
+include_once get_template_directory() . '/includes/gutenburg.php';
+include_once get_template_directory() . '/includes/helper-functions.php';
+include_once get_template_directory() . '/includes/bootstrap-wp-navwalker.php';
 //include_once get_template_directory().'/includes/acf-custom-widget.php';
 
 /* Hooks */
@@ -11,9 +11,9 @@ if (!function_exists('enqueue_scripts')) {
     add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
     // Cache bust constants
-    define('THEMESTYLE_VERSION', filemtime(get_stylesheet_directory().'/style/style.css'));
-    define('HEADERBUNDLE_VERSION', filemtime(get_stylesheet_directory().'/js/header-bundle.js'));
-    define('FOOTERBUNDLE_VERSION', filemtime(get_stylesheet_directory().'/js/footer-bundle.js'));
+    define('THEMESTYLE_VERSION', filemtime(get_stylesheet_directory() . '/style/style.css'));
+    define('HEADERBUNDLE_VERSION', filemtime(get_stylesheet_directory() . '/js/header-bundle.js'));
+    define('FOOTERBUNDLE_VERSION', filemtime(get_stylesheet_directory() . '/js/footer-bundle.js'));
 
     function enqueue_scripts()
     {
@@ -21,9 +21,9 @@ if (!function_exists('enqueue_scripts')) {
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
 
-        wp_enqueue_style('style_file', get_stylesheet_directory_uri().'/style/style.css', [], THEMESTYLE_VERSION);
-        wp_enqueue_script('header_js', get_stylesheet_directory_uri().'/js/header-bundle.js', null, HEADERBUNDLE_VERSION, false);
-        wp_enqueue_script('footer_js', get_stylesheet_directory_uri().'/js/footer-bundle.js', null, FOOTERBUNDLE_VERSION, true);
+        wp_enqueue_style('style_file', get_stylesheet_directory_uri() . '/style/style.css', [], THEMESTYLE_VERSION);
+        wp_enqueue_script('header_js', get_stylesheet_directory_uri() . '/js/header-bundle.js', null, HEADERBUNDLE_VERSION, false);
+        wp_enqueue_script('footer_js', get_stylesheet_directory_uri() . '/js/footer-bundle.js', null, FOOTERBUNDLE_VERSION, true);
     }
 }
 
@@ -47,7 +47,7 @@ if (!function_exists('custom_after_setup_theme')) {
         add_editor_style('style-editor.css');
 
         // Enable wide alignment for Gutenberg
-        add_theme_support( 'align-wide' );
+        add_theme_support('align-wide');
     }
 }
 
@@ -83,10 +83,10 @@ function register_acf_block_types()
         'description' => __('Simple Image and Text Banner with Optional Buttons.'),
         'render_template' => 'includes/gutenburg/banner-block.php',
         'category' => 'formatting',
-        'supports' => array( 'align' => false ),
+        'supports' => array('align' => false),
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['banner'],
-        'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/block-styles.css',
+        'enqueue_style' => get_template_directory_uri() . '/includes/gutenburg/block-styles.css',
     ]);
     acf_register_block_type([
         'name' => 'sproing-card-carousel',
@@ -94,7 +94,7 @@ function register_acf_block_types()
         'description' => __('A Rotating Card Carousel with Links.'),
         'render_template' => 'includes/gutenburg/card-carousel.php',
         'category' => 'formatting',
-        'supports' => array( 'align' => false ),
+        'supports' => array('align' => false),
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['carousel, card'],
     ]);
@@ -104,7 +104,7 @@ function register_acf_block_types()
         'description' => __('Simple Centered Title and Text Layout Block.'),
         'render_template' => 'includes/gutenburg/simple-center-layout.php',
         'category' => 'formatting',
-        'supports' => array( 'align' => false ),
+        'supports' => array('align' => false),
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['layout'],
     ]);
@@ -113,3 +113,11 @@ function register_acf_block_types()
 if (function_exists('acf_register_block_type')) {
     add_action('acf/init', 'register_acf_block_types');
 }
+
+/* show only children for Homepage Services Relationship ACF */
+function my_relationship_query( $args, $field, $post_id ) {
+    $args['post_parent'] = 21;
+    return $args;
+}
+
+add_filter('acf/fields/relationship/query', 'my_relationship_query', 10, 3);
