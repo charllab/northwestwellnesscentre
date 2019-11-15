@@ -135,6 +135,22 @@
             </div>
         </section>
 
+        <?php $featured_services = get_field('featured_services');
+        if ($featured_services):
+            $posts = $featured_services;
+            ?>
+            <ul>
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                    <?php setup_postdata($post); ?>
+                    <li>
+                        <h2 class="h1"><?php the_title(); ?></h2>
+                        <p><?php the_field('card_excerpt', $post); ?></p>
+                        <a href="<?php the_permalink(); ?>">Read More</a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <?php wp_reset_postdata(); endif ?>
+
         <section>
             <div class="container card-set--blue">
                 <!-- CARD DECK -->
