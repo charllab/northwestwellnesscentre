@@ -140,6 +140,45 @@ get_header();
         </div><!-- container -->
 
 
+    <h3>Testing</h3>
+
+        <section>
+            <div class="container card-set--blue">
+                <!-- CARD DECK -->
+                <div class="card-deck">
+
+                    <?php
+                    // Init args
+                    $args = [
+                        'post__not_in' => array(get_the_ID()),
+                        'post_parent' => 21,
+                        'post_type' => 'page',
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC',
+                    ];
+
+                    $wp_query = new WP_Query($args);
+
+                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title"><?php the_title(); ?></h3>
+                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+
+                    <?php wp_reset_postdata(); ?>
+
+                </div>
+                <!-- CARD DECK -->
+            </div>
+        </section>
+
+
     <?php endif; ?>
 
 </main>

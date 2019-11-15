@@ -155,15 +155,14 @@
             <div class="container card-set--blue">
                 <!-- CARD DECK -->
                 <div class="card-deck">
-
                     <?php
-                    // Init args
+                    $ids = get_field('featured_services', false, false);
                     $args = [
                         'post_parent' => 21,
                         'post_type' => 'page',
                         'orderby' => 'menu_order',
                         'order' => 'ASC',
-
+                        'post__not_in' => $ids
                     ];
 
                     $wp_query = new WP_Query($args);
@@ -180,7 +179,7 @@
 
                     <?php endwhile; ?>
 
-                    <?php wp_reset_query(); ?>
+                    <?php wp_reset_postdata(); ?>
 
                 </div>
                 <!-- CARD DECK -->
