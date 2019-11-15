@@ -23,8 +23,8 @@ $id = 'banner-carousel-' . $block['id'];
             <div class="row">
                 <div class="col <?php the_field('full_banner_block_layout'); ?>">
                     <h2 class="h1 text-white text-center mb-0
-                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-8'): ?> text-md-left mb-0 mx-50<?php endif; ?>
-                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-0'): ?> text-md-left mb-0 mx-50<?php endif; ?>
+                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-8 col-xxl-5 offset-xxl-7'): ?> text-md-left mb-0 mx-50<?php endif; ?>
+                        <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 col-xxl-5'): ?> text-md-left mb-0 mx-50<?php endif; ?>
                         ">
                         <?php the_field('full_banner_block_title'); ?>
                     </h2>

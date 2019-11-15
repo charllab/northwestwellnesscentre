@@ -21,7 +21,7 @@
         <section class="bg-warning">
             <div class="container py-4 py-md-7">
                 <div class="row">
-                    <div class="col col-sm-8 offset-sm-2 col-lg-4 offset-lg-8">
+                    <div class="col col-sm-8 offset-sm-2 col-lg-4 offset-lg-8 col-xxl-5 offset-xxl-7">
                         <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy
                             Counseling</h2>
                         <div class="d-sm-flex mt-150">
@@ -39,7 +39,7 @@
         <section class="bg-warning">
             <div class="container py-4 py-md-7">
                 <div class="row">
-                    <div class="col col-sm-8 offset-sm-2 col-lg-4 offset-lg-0">
+                    <div class="col col-sm-8 offset-sm-2 col-lg-4 col-xxl-5 offset-lg-0">
                         <h2 class="h1 text-center text-md-left text-white mb-0 mx-50">Child & Family Therapy
                             Counseling</h2>
                         <div class="d-sm-flex mt-150">
