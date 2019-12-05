@@ -1,5 +1,30 @@
 jQuery(function () {
 
+    // owl carousel sponsors
+    jQuery('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: true,
+        smartSpeed: 500,
+        autoplay: true,
+        navContainer: '.owl-nav-outside',
+        navText: '',
+        stagePadding: 30,
+        responsive:{
+            0: {
+                items:1
+            },
+            912: {
+                items:2
+            },
+            1280: {
+                items:3
+            }
+        }
+    })
+
+
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 

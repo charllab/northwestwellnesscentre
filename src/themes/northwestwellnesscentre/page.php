@@ -17,7 +17,8 @@ get_header();
                             <div href="#panel_<?php echo $i; ?>" data-toggle="collapse"
                                  class="col-12 px-0 faq__question-block">
                                 <span class="faq__question-number"><strong><?php echo $i; ?></strong></span>
-                                <span class="faq__question-text fas <?php if ($i == 1) : ?> fa-minus <?php else : ?> fa-plus <?php endif; ?>"><strong><?php echo the_sub_field('question'); ?></strong></span>
+                                <span
+                                    class="faq__question-text fas <?php if ($i == 1) : ?> fa-minus <?php else : ?> fa-plus <?php endif; ?>"><strong><?php echo the_sub_field('question'); ?></strong></span>
                             </div><!-- faq__question-block -->
                         </div><!-- col -->
                         <div class="col-10 collapse <?php if ($i == 1) : ?> show <?php endif; ?>"
@@ -36,22 +37,22 @@ get_header();
 
         <section class="py-3">
             <div class="container">
-                    <div class="row py-3">
-                        <div class="col-12 px-0">
-                            <?php if (have_posts()) : ?>
-                                <h2><?php the_title(); ?></h2>
-                                <p>Please add markup to the page.php template…</p>
+                <div class="row py-3">
+                    <div class="col-12 px-0">
+                        <?php if (have_posts()) : ?>
+                            <h2><?php the_title(); ?></h2>
+                            <p>Please add markup to the page.php template…</p>
 
-                                <?php /* Start the Loop */ ?>
+                            <?php /* Start the Loop */ ?>
 
-                                <?php while (have_posts()) : the_post(); ?>
-                                    <?php the_content(); ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                                <?php the_content(); ?>
 
-                                <?php endwhile; ?>
+                            <?php endwhile; ?>
 
-                            <?php endif; ?>
-                        </div>
+                        <?php endif; ?>
                     </div>
+                </div>
 
             </div><!-- container -->
         </section>
@@ -140,43 +141,52 @@ get_header();
         </div><!-- container -->
 
 
-    <h3>Testing</h3>
+        <h3>Other Services</h3>
 
-        <section>
-            <div class="container card-set--blue">
-                <!-- CARD DECK -->
-                <div class="card-deck">
+        <div class="alignfull pb-3">
+            <div class="pt-lg-4">
+                <div class="position-relative py-1">
+                    <div class="owl-nav-outside"></div>
+                    <div class="container px-sm-4 px-xl-2 px-xxl-1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="owl-carousel owl-theme">
 
-                    <?php
-                    // Init args
-                    $args = [
-                        'post__not_in' => array(get_the_ID()),
-                        'post_parent' => 21,
-                        'post_type' => 'page',
-                        'orderby' => 'menu_order',
-                        'order' => 'ASC',
-                    ];
+                                    <?php
+                                    $ids = get_field('featured_services', false, false);
+                                    $args = [
+                                        'post_parent' => 21,
+                                        'post_type' => 'page',
+                                        'orderby' => 'menu_order',
+                                        'order' => 'ASC',
+                                        'post__not_in' => $ids
+                                    ];
 
-                    $wp_query = new WP_Query($args);
+                                    $wp_query = new WP_Query($args);
 
-                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title"><?php the_title(); ?></h3>
-                                <p class="card-text"><?php the_excerpt(); ?></p>
-                                <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
+                                        <div class="item py-2">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><?php the_title(); ?></h3>
+                                                    <p class="card-text"><?php the_excerpt(); ?></p>
+                                                    <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <?php endwhile; ?>
+
+                                    <?php wp_reset_postdata(); ?>
+
+                                </div>
                             </div>
                         </div>
-
-                    <?php endwhile; ?>
-
-                    <?php wp_reset_postdata(); ?>
-
+                    </div>
                 </div>
-                <!-- CARD DECK -->
             </div>
-        </section>
+        </div>
 
 
     <?php endif; ?>

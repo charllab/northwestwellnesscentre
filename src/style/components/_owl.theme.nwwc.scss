@@ -1,0 +1,83 @@
+
+.owl-nav-outside {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button.owl-next,
+    button.owl-prev {
+        display: inline-block;
+        width: 8%;
+        height: 46px;
+        background-size: 100% 100%;
+        outline: none;
+        background-color: transparent;
+        border: none;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 89px;
+        }
+
+    }
+
+    button.owl-next {
+        background-image: url('../images/carousel-light-right-arrow.svg');
+    }
+
+    button.owl-prev {
+        background-image: url('../images/carousel-light-left-arrow.svg');
+    }
+}
+
+.owl-carousel {
+    .owl-dots {
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $spacer;
+        margin-bottom: -$spacer*2;
+
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+    }
+
+    .owl-dots .owl-dot {
+        outline: none;
+    }
+
+    .owl-dots .owl-dot span {
+        width: 30px;
+        height: 3px;
+        margin: 5px 4px;
+        background: rgba(28, 47, 68, 0.5);
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        outline: none;
+    }
+    .owl-dots .owl-dot.active span {
+        background: $primary;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    /* IE10+ specific styles go here */
+    .owl-nav-outside {
+        button.owl-next,
+        button.owl-prev {
+            background-size : 24px;
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+        }
+    }
+}

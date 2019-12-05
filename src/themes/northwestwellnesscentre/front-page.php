@@ -68,93 +68,38 @@
 
         <section>
             <div class="container card-set--blue">
-                <!-- CARD DECK -->
-                <div class="card-deck">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
+                <div class="row justify-content-center">
+
+                    <?php $featured_services = get_field('featured_services');
+                    if ($featured_services):
+                        $services = $featured_services;
+                        ?>
+
+                        <?php foreach ($services as $post): // variable must be called $post (IMPORTANT) ?>
+                        <?php setup_postdata($post); ?>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
+                                    <p class="card-text"><?php the_field('card_excerpt', $post); ?></p>
+                                    <a class="btn btn-inline" href="<?php echo get_the_permalink($post->ID); ?>">Learn
+                                        More
+                                        &rarr;</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+                    <?php wp_reset_postdata(); endif ?>
+
                 </div>
-                <!-- CARD DECK -->
             </div>
         </section>
 
-        <br>
-        <br>
 
         <section>
             <div class="container">
-                <!-- CARD DECK -->
-                <div class="card-deck">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Card Title</h3>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
-                                quas.</p>
-                            <a class="btn btn-inline" href="#">Learn More &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD DECK -->
-            </div>
-        </section>
 
-        <?php $featured_services = get_field('featured_services');
-        if ($featured_services):
-            $services = $featured_services;
-            ?>
-            <ul>
-                <?php foreach( $services as $post): // variable must be called $post (IMPORTANT) ?>
-                    <?php setup_postdata($post); ?>
-                    <li>
-                        <h2 class="h1"><?php echo get_the_title( $post->ID ); ?></h2>
-                        <p><?php the_field('card_excerpt', $post); ?></p>
-                        <a href="<?php echo get_the_permalink($post->ID); ?>">Read More</a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-            <?php wp_reset_postdata(); endif ?>
-
-        <section>
-            <div class="container card-set--blue">
-                <!-- CARD DECK -->
-                <div class="card-deck">
+                <div class="row justify-content-center">
                     <?php
                     $ids = get_field('featured_services', false, false);
                     $args = [
@@ -169,6 +114,7 @@
 
                     while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
+                    <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="card-title"><?php the_title(); ?></h3>
@@ -176,15 +122,60 @@
                                 <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
                             </div>
                         </div>
-
+                    </div>
                     <?php endwhile; ?>
 
                     <?php wp_reset_postdata(); ?>
 
                 </div>
-                <!-- CARD DECK -->
             </div>
         </section>
+
+
+        <div class="alignfull pb-3">
+            <div class="pt-lg-4">
+                <div class="position-relative py-1">
+                    <div class="owl-nav-outside"></div>
+                    <div class="container px-sm-4 px-xl-2 px-xxl-1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="owl-carousel owl-theme">
+
+                                    <?php
+                                    $ids = get_field('featured_services', false, false);
+                                    $args = [
+                                        'post_parent' => 21,
+                                        'post_type' => 'page',
+                                        'orderby' => 'menu_order',
+                                        'order' => 'ASC',
+                                        'post__not_in' => $ids
+                                    ];
+
+                                    $wp_query = new WP_Query($args);
+
+                                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+                                        <div class="item py-1">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><?php the_title(); ?></h3>
+                                                    <p class="card-text"><?php the_excerpt(); ?></p>
+                                                    <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <?php endwhile; ?>
+
+                                    <?php wp_reset_postdata(); ?>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <br>
