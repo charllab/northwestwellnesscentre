@@ -3,14 +3,14 @@ jQuery(function () {
     // owl carousel sponsors
     jQuery('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 30,
+        margin: 32,
         nav: true,
         dots: true,
         smartSpeed: 500,
         autoplay: true,
         navContainer: '.owl-nav-outside',
         navText: '',
-        stagePadding: 30,
+        stagePadding: 17,
         responsive:{
             0: {
                 items:1

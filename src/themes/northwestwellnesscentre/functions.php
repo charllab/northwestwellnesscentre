@@ -1,4 +1,40 @@
 <?php
+
+/*start*/
+
+/**
+ * SVG Icons class.
+ */
+require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
+
+/**
+ * Custom Comment Walker template.
+ */
+require get_template_directory() . '/classes/class-twentynineteen-walker-comment.php';
+
+/**
+ * Enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * SVG Icons related functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+
+/**
+ * Custom template tags for the theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/*end*/
+
+
 /* Require Includes */
 include_once get_template_directory() . '/includes/gutenburg.php';
 include_once get_template_directory() . '/includes/helper-functions.php';
@@ -33,6 +69,8 @@ if (!function_exists('custom_after_setup_theme')) {
 
     function custom_after_setup_theme()
     {
+        add_post_type_support('page', 'excerpt');
+
         remove_theme_support('custom-background');
         remove_theme_support('post-thumbnails');
 
@@ -72,6 +110,20 @@ if (function_exists('acf_add_options_page')) {
         'position' => 80,
         'redirect' => false
     ]);
+}
+
+/* trim that excerpt */
+function get_excerpt()
+{
+    $excerpt = get_the_content();
+    $excerpt = preg_replace(" ([.*?])", '', $excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, 150);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = trim(preg_replace('/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt . '...';
+    return $excerpt;
 }
 
 /* AX - Gutenberg Blocks */
@@ -115,7 +167,8 @@ if (function_exists('acf_register_block_type')) {
 }
 
 /* show only children for Homepage Services Relationship ACF */
-function my_relationship_query( $args, $field, $post_id ) {
+function my_relationship_query($args, $field, $post_id)
+{
     $args['post_parent'] = 21;
     return $args;
 }

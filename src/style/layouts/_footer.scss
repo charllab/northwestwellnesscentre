@@ -1,0 +1,9 @@
+.footer-nav {
+    .menu-item {
+        &:first-of-type {
+            .nav-link {
+                padding-left: 0;
+            }
+        }
+    }
+}

@@ -2,9 +2,13 @@
 get_header();
 ?>
 
+<h1>index.php</h1>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <h1>Our Blog</h1>
+
             <?php if (have_posts()) : ?>
 
                 <?php /* Start the Loop */ ?>

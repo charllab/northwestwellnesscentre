@@ -4,6 +4,8 @@ get_header();
 
 <main>
 
+    <h1>page.php</h1>
+
     <?php if (is_page([1716])) : ?>
 
         <?php if (have_rows('faq_block')) : $i = 0; ?>
@@ -140,47 +142,53 @@ get_header();
             </div><!-- row -->
         </div><!-- container -->
 
-
-        <h3>Other Services</h3>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="h1">Other Services</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="alignfull pb-3">
-            <div class="pt-lg-4">
-                <div class="position-relative py-1">
-                    <div class="owl-nav-outside"></div>
-                    <div class="container px-sm-4 px-xl-2 px-xxl-1">
-                        <div class="row">
-                            <div class="col">
-                                <div class="owl-carousel owl-theme">
+            <div class="position-relative">
+                <div class="owl-nav-outside"></div>
+                <div class="container px-sm-4 px-xl-2 px-xxl-1">
+                    <div class="row">
+                        <div class="col">
+                            <div class="owl-carousel owl-theme">
 
-                                    <?php
-                                    $ids = get_field('featured_services', false, false);
-                                    $args = [
-                                        'post_parent' => 21,
-                                        'post_type' => 'page',
-                                        'orderby' => 'menu_order',
-                                        'order' => 'ASC',
-                                        'post__not_in' => $ids
-                                    ];
+                                <?php
+                                $ids = get_field('featured_services', false, false);
+                                $args = [
+                                    'post_parent' => 21,
+                                    'post_type' => 'page',
+                                    'orderby' => 'menu_order',
+                                    'order' => 'ASC',
+                                    'post__not_in' => $ids
+                                ];
 
-                                    $wp_query = new WP_Query($args);
+                                $wp_query = new WP_Query($args);
 
-                                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-                                        <div class="item py-2">
-                                            <div class="card">
-                                                <div class="card-body">
-                                                    <h3 class="card-title"><?php the_title(); ?></h3>
-                                                    <p class="card-text"><?php the_excerpt(); ?></p>
-                                                    <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More &rarr;</a>
-                                                </div>
+                                    <div class="item py-2">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <h3 class="card-title"><?php the_title(); ?></h3>
+                                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                                <a class="btn btn-secondary" href="<?php the_permalink(); ?>">Learn
+                                                    More</a>
                                             </div>
                                         </div>
+                                    </div>
 
-                                    <?php endwhile; ?>
+                                <?php endwhile; ?>
 
-                                    <?php wp_reset_postdata(); ?>
+                                <?php wp_reset_postdata(); ?>
 
-                                </div>
                             </div>
                         </div>
                     </div>

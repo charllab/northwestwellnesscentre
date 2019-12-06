@@ -22,10 +22,13 @@ button, .btn {
     }
 }
 
+.card .btn-inline,
 .btn-inline {
+    line-height: 1;
     color: inherit;
     padding: 0;
     min-width: auto;
+    padding: 0;
 }
 
 .btn-light {

@@ -4,6 +4,8 @@ get_header();
 
     <main class="py-1 py-lg-2">
 
+        <h1>single.php</h1>
+
         <?php
         // Start the loop.
         while (have_posts()) : the_post(); ?>
