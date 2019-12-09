@@ -117,3 +117,55 @@ body {
     max-width: 100vw;
     margin-bottom: 0;
 }
+
+// contact page
+
+.location__info {
+
+    @include media-breakpoint-up(xl) {
+        font-size: 0.818181818rem;
+    }
+
+    td {
+        vertical-align: top;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            display: block;
+        }
+    }
+    .location__info--td {
+
+        @include media-breakpoint-up(xs) {
+            width: 32%;
+        }
+    }
+
+    .location__info--blanks {
+
+        @include media-breakpoint-down(md) {
+            height: 0;
+        }
+    }
+}
+.location__info--repeater-col {
+
+    @include media-breakpoint-down(sm) {
+        &:not(:first-of-type) {
+            .location__info--header {
+                border-top: 1px solid rgba($body-color, .25);
+                margin-top: $spacer;
+                padding-top: $spacer;
+            }
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        &:not(:first-of-type) {
+            .location__info--header {
+                border-top: 1px solid rgba($body-color, .25);
+                margin-top: $spacer;
+                padding-top: $spacer;
+            }
+        }
+    }
+}
