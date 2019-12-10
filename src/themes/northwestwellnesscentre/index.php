@@ -4,24 +4,46 @@ get_header();
 
 <h1>index.php</h1>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Our Blog</h1>
+<main>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8 d-md-flex flex-wrap px-0 blogpage-blogblocks">
 
-            <?php if (have_posts()) : ?>
+                <?php
+                $limit = 10;
 
-                <?php /* Start the Loop */ ?>
+                $temp = $wp_query;
+                $wp_query = null;
 
-                <?php while (have_posts()) : the_post(); ?>
+                $wp_query = new WP_Query();
+                $wp_query->query('posts_per_page=' . $limit . '&paged=' . $paged);
 
-                    <?php the_content(); ?>
+                while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+                        <div class="blog__block">
+                            <h2 class="mb-250"><?php the_title(); ?></h2>
+                            <?php twentynineteen_posted_on(); ?>
+                            <p>
+                                <?php the_excerpt(); ?>
+                            </p>
+                            <p class="mb-0">
+                                <a href="<?php the_permalink(); ?>" class="font-weight-bold">
+                                    <span>Continue Reading</span> <i class="ml-250 fas fa-arrow-right"></i>
+                                </a>
+                            </p>
+
+                        </div>
+                        <hr class="blog__hr my-2 w-100">
+
+                    </article>
 
                 <?php endwhile; ?>
 
-            <?php endif; ?>
+            </div><!-- col -->
         </div>
     </div>
-</div>
+</main>
 
 <?php get_footer(); ?>

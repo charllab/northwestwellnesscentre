@@ -7,9 +7,30 @@ body {
 
 .bg-size-cover {
     background-size: cover;
+    background-position: center;
 }
 .bg-general {
     background-color: $general;
+}
+
+.btn--flex-clear {
+    align-self: start;
+}
+
+.banner__block {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner__color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .60);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -118,6 +139,26 @@ body {
     margin-bottom: 0;
 }
 
+// blog
+
+.blog__hr {
+    border-top: 1px dashed $secondary;
+}
+
+article {
+    &:last-of-type {
+        .blog__hr {
+            display: none;
+        }
+    }
+}
+
+.posted-on {
+    display: block;
+    margin-bottom: $spacer/2;
+}
+
+
 // contact page
 
 .location__info {
@@ -169,3 +210,79 @@ body {
         }
     }
 }
+
+// spa page
+
+.spa__experience--sand {
+    background: transparent url('../images/spa-sand.jpg') no-repeat left center;
+
+    overflow: hidden;
+}
+
+.spa__experience {
+
+    p {
+
+        @include media-breakpoint-up(xxl) {
+            font-size: 0.818181818rem;
+        }
+    }
+}
+
+.spa__experience--header {
+
+    @include media-breakpoint-up(lg) {
+        max-width: 270px;
+    }
+    @include media-breakpoint-up(xxl) {
+        max-width: 350px;
+    }
+}
+
+.spa__experience--list {
+    font-size: 0.909090909rem;
+    font-weight: 700;
+
+    .list-inline-item {
+
+
+        &:first-child {
+            span {
+                display: none;
+            }
+        }
+        span {
+            margin-left: $spacer*.025;
+            margin-right: $spacer*.25;
+        }
+    }
+}
+
+.spa__experience--footer-content {
+
+    z-index: 9999;
+    position: relative;
+
+    max-width: 672px;
+
+    @include media-breakpoint-up(xxl) {
+        max-width:544px;
+    }
+}
+
+.spa__experience--fx {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+}
+
+.spa__experience--trans {
+    right: 0;
+}
+
+.spa__experience--corner {
+    left: 0;
+}
+

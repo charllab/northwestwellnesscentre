@@ -9,6 +9,7 @@ $primary: #9EB8C8;
 $secondary: #9ABFA2;
 $tertiary: #A8C4C5;
 $quaternary: #C1CD90;
+$sand: #F4F3EF;
 
 $body-color: #6A6A6A;
 $headings-color: #373A3F;
@@ -71,6 +72,7 @@ $spacers: map-merge((
     125: ($spacer * 1.25),
     150: ($spacer * 1.5),
     175: ($spacer * 1.75),
+    225: ($spacer * 2.25),
     25: ($spacer * 2.5),
     350: ($spacer * 3.5)
 

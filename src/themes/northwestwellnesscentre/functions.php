@@ -141,6 +141,16 @@ function register_acf_block_types()
         'enqueue_style' => get_template_directory_uri() . '/includes/gutenburg/block-styles.css',
     ]);
     acf_register_block_type([
+        'name' => 'simple-pingpong',
+        'title' => __('Sproing Image and Text Layout Block'),
+        'description' => __('A simple image and text block.'),
+        'render_template' => 'includes/gutenburg/simple-pingpong.php',
+        'category' => 'formatting',
+        'supports' => array( 'align' => false ),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
+    acf_register_block_type([
         'name' => 'sproing-card-carousel',
         'title' => __('Sproing Card Carousel'),
         'description' => __('A Rotating Card Carousel with Links.'),
