@@ -170,6 +170,16 @@ function register_acf_block_types()
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['layout'],
     ]);
+    acf_register_block_type([
+        'name' => 'simple-spacer-block',
+        'title' => __('Sproing Spacer Block'),
+        'description' => __('Simple Spacer Block.'),
+        'render_template' => 'includes/gutenburg/simple-spacer.php',
+        'category' => 'formatting',
+        'supports' => array('align' => false),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
 }
 
 if (function_exists('acf_register_block_type')) {

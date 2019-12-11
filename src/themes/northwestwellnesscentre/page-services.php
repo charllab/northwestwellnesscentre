@@ -1,0 +1,73 @@
+<?php
+get_header();
+?>
+
+<main class="mb-3 mb-lg-4">
+
+    <h1>page-services.php</h1>
+
+    <div class="container py-2">
+
+        <div class="row">
+            <div class="col-12">
+
+                <?php
+                if (function_exists('yoast_breadcrumb')) {
+                    yoast_breadcrumb('<p id="breadcrumbs" class="spr-breadcrumb mb-1">', '</p>');
+                }
+                ?>
+
+                <h1 class="text-capitalize"><?php the_title(); ?></h1>
+
+                <?php if (have_posts()) : ?>
+
+                    <?php /* Start the Loop */ ?>
+
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php the_content(); ?>
+
+                    <?php endwhile; ?>
+
+                <?php endif; ?>
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+
+    <section>
+        <div class="container card-set--blue">
+            <div class="row justify-content-center">
+
+                <?php
+
+                $args = [
+                    'post_parent' => 21,
+                    'post_type' => 'page',
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                ];
+
+                $wp_query = new WP_Query($args);
+
+                while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
+                                <p class="card-text"><?php the_excerpt(); ?></p>
+                                <a class="btn btn-inline" href="<?php echo get_the_permalink($post->ID); ?>">Learn
+                                    More
+                                    &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata() ?>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+<?php get_footer(); ?>

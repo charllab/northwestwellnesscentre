@@ -4,7 +4,7 @@ get_header();
 
 <h1>index.php</h1>
 
-<main>
+<main class="mb-3 mb-lg-4">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 d-md-flex flex-wrap px-0 blogpage-blogblocks">
