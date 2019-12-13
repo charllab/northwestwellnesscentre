@@ -2,14 +2,14 @@
 
     <div class="header-box">
         <div class="container py-1 py-xxl-0">
-            <div class="row align-items-center h-100">
+            <div class="row justify-content-between align-items-center h-100">
                 <div class="col d-sm-none text-center pb-75">
                     <a href="" target="_blank" class="btn btn-primary">
                         Book An Appointment
                     </a>
                 </div>
-                <div class="col-10 col-sm-6 offset-lg-3">
-                    <div class="nav-logo text-lg-center">
+                <div class="col-10 col-sm-6">
+                    <div class="nav-logo">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <img src="<?php bloginfo('template_url'); ?>/images/logo.svg"
                                  alt="<?php bloginfo('name'); ?> - Logo"
