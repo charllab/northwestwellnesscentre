@@ -12,7 +12,7 @@
                 ]); ?>
             </div>
             <div class="col-lg-3 d-flex">
-                <a href="" target="_blank" class="btn btn-primary ml-lg-auto">
+                <a href="<?php the_sub_field('book_now_link', 'options'); ?>" target="_blank" class="btn btn-primary ml-lg-auto">
                     Book An Appointment
                 </a>
             </div>
