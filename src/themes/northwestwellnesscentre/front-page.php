@@ -26,7 +26,7 @@
                     <?php foreach ($services as $post): // variable must be called $post (IMPORTANT) ?>
                     <?php setup_postdata($post); ?>
                     <div class="col-lg-4">
-                        <div class="card">
+                        <div class="card js-featureditem-heightset">
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
                                 <p class="card-text"><?php the_excerpt(); ?></p>

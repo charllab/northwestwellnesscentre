@@ -22,8 +22,49 @@ jQuery(function () {
                 items:3
             }
         }
-    })
+    });
 
+    // find the highest of the featured item
+    var maxHeight = -1;
+    var win = jQuery(window); //this = window
+
+    if (win.width() >= 998) {
+
+        jQuery('.js-featureditem-heightset').each(function() {
+            maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
+        });
+
+        jQuery('.js-featureditem-heightset').each(function() {
+            jQuery(this).css('min-height', maxHeight + 'px');
+        });
+
+    } else if (win.width() <= 998) {
+        jQuery('.js-featureditem-heightset').each(function() {
+            jQuery(this).css('min-height', '0px');
+        });
+    }
+
+    $(function() {
+        $(window).resize(function() {
+            var win = jQuery(this); //this = window
+
+            if (win.width() >= 998) {
+                var maxHeight = -1;
+
+                jQuery('.js-featureditem-heightset').each(function() {
+                    maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
+                });
+
+                jQuery('.js-featureditem-heightset').each(function() {
+                    jQuery(this).css('min-height', maxHeight + 'px');
+                });
+            } else if (win.width() <= 998) {
+                jQuery('.js-featureditem-heightset').each(function() {
+                    jQuery(this).css('min-height', '0px');
+                });
+            }
+        });
+    });
 
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');

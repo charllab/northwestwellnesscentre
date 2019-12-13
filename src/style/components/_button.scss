@@ -13,6 +13,11 @@ button, .btn {
     line-height: 1.35;
     padding: 0.727272727rem $spacer;
     font-size: 0.909090909rem;
+
+    &:hover,
+    &:active {
+        color: $active;
+    }
 }
 
 .banner__block {

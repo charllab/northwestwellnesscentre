@@ -81,3 +81,26 @@
         }
     }
 }
+
+.owl-carousel  {
+    display: flex !important;
+    height: 100%;
+}
+.owl-carousel .owl-item > .item  {
+    display: flex;
+    height: 100%;
+}
+.owl-carousel .owl-item > .item > .card {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    max-width: initial;
+}
+
+.owl-stage {
+    display: flex;
+}
+.owl-item {
+    display: flex;
+    flex: 1 0 auto;
+}

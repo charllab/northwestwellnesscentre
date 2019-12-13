@@ -21,7 +21,7 @@
                         while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
                             <div class="item py-1">
-                                <div class="card">
+                                <div class="card js-serviceitem-heightset">
                                     <div class="card-body">
                                         <h3 class="card-title"><?php the_title(); ?></h3>
                                         <?php the_excerpt(); ?>
