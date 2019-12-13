@@ -15,6 +15,12 @@ button, .btn {
     font-size: 0.909090909rem;
 }
 
+.banner__block {
+    .btn {
+        padding: 0.727272727rem $spacer*1.35;
+    }
+}
+
 .btn-xs-block {
     @include media-breakpoint-down(xs) {
         width: 100%;
@@ -29,6 +35,13 @@ button, .btn {
     padding: 0;
     min-width: auto;
     padding: 0;
+    color: $body-color;
+}
+.card-set--blue {
+    .card .btn-inline,
+    .btn-inline {
+        color: white;
+    }
 }
 
 .btn-light {

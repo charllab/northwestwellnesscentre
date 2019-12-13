@@ -1,5 +1,9 @@
 .hero-nav-overlay {
 
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+        color: $active;
+    }
+
     .header-box {
 
         @include media-breakpoint-down(sm) {

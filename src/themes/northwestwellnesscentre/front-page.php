@@ -45,7 +45,7 @@
     </section>
 
     <section>
-        <div class="container">
+        <div class="container pt-3">
             <div class="row">
                 <div class="col text-center">
                     <h2 class="h1">Additional Core Services</h2>
@@ -55,49 +55,7 @@
         </div>
     </section>
 
-    <div class="alignfull pb-3">
-        <div class="position-relative">
-            <div class="owl-nav-outside"></div>
-            <div class="container px-sm-4 px-xl-2 px-xxl-1">
-                <div class="row">
-                    <div class="col">
-                        <div class="owl-carousel owl-theme">
-
-                            <?php
-                            $ids = get_field('featured_services', false, false);
-                            $args = [
-                                'post_parent' => 21,
-                                'post_type' => 'page',
-                                'orderby' => 'menu_order',
-                                'order' => 'ASC',
-                                'post__not_in' => $ids
-                            ];
-
-                            $wp_query = new WP_Query($args);
-
-                            while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
-                                <div class="item py-1">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h3 class="card-title"><?php the_title(); ?></h3>
-                                            <p class="card-text"><?php the_excerpt(); ?></p>
-                                            <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More
-                                                &rarr;</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <?php endwhile; ?>
-
-                            <?php wp_reset_postdata(); ?>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php get_template_part('partials/cards/services'); ?>
 
     <section>
         <div class="container">

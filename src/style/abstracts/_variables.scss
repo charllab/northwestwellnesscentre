@@ -11,6 +11,8 @@ $tertiary: #A8C4C5;
 $quaternary: #C1CD90;
 $sand: #F4F3EF;
 
+$active: #373A3F;
+
 $body-color: #6A6A6A;
 $headings-color: #373A3F;
 $input-focus-border-color: $primary;
@@ -18,7 +20,7 @@ $grey: #8B8B8B;
 $soft: rgba($headings-color, .1);
 $general: #C2CBD4;
 
-$navbar-dark-active-color: $body-color;
+$navbar-dark-active-color: $active;
 
 $selection-color: #d9edf7;
 

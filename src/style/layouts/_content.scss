@@ -90,7 +90,7 @@ body {
     color: inherit;
     margin-bottom: $spacer/2.5;
 }
-.card-text {
+p {
     font-size: 0.818181818rem;
     line-height: 1.444444444;
     margin-bottom: $spacer;
@@ -102,7 +102,7 @@ body {
         background-color: $primary;
         color: white;
     }
-    .card-text {
+    p {
         color: inherit;
     }
 }

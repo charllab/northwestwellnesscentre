@@ -1,4 +1,65 @@
-<footer>
+<?php
+$nospafooter = [40,42,44];
+?>
+
+<?php if (!is_page($nospafooter)) : ?>
+
+    <section class="bg-sand">
+        <div class="container-fluid px-md-0 spa__experience--sand">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 offset-lg-2 spa__experience pr-lg-2 position-relative">
+
+                    <div class="spa__experience--fx spa__experience--trans h-100">
+                        <img src="<?php bloginfo('template_url'); ?>/images/trans.png"
+                             alt=" "
+                             class="h-100 d-none d-md-block">
+                    </div>
+
+                    <div class="spa__experience--footer-content px-md-1 px-lg-0 py-2 py-lg-3">
+
+                        <h3 class="h1 spa__experience--header">Your Perfect Spa Experience</h3>
+                        <p><?php the_field('spa_blurb', 'options'); ?></p>
+
+                        <?php if (have_rows('spa_experience_list', 'options')): ?>
+
+                            <ul class="list-inline spa__experience--list">
+
+                                <?php while (have_rows('spa_experience_list', 'options')): the_row();
+
+                                    // vars
+                                    $item = get_sub_field('spa_experience_list_item', 'options');
+
+                                    ?>
+                                    <li class="list-inline-item mr-0"><span>&bull;</span><?php echo $item; ?></li>
+
+                                <?php endwhile; ?>
+
+                            </ul>
+
+                        <?php endif; ?>
+
+                        <?php if (get_field('spa_button_link', 'options') && get_field('spa_button_text', 'options')): ?>
+                            <a href="<?php the_field('spa_button_link', 'options'); ?>"
+                               class="btn btn-light mt-2"><?php the_field('spa_button_text', 'options'); ?></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="d-none d-md-block col-md-6 col-lg-6 bg-dark text-white position-relative bg-size-cover"
+                     style="background-image: url(<?php the_field('spa_experience_image', 'options'); ?>);">
+                    <div class="spa__experience--fx spa__experience--corner h-100">
+                        <img src="<?php bloginfo('template_url'); ?>/images/corner-sharp.png"
+                             alt=" "
+                             class="h-100 d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<?php endif; ?>
+
+<footer class="<?php if (is_page($nospafooter)) : ?>mt-150 footer__bdr-top<?php endif; ?>">
 
     <div class="container py-1 d-none d-lg-block">
         <div class="row no-gutters">

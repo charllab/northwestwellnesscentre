@@ -1,3 +1,15 @@
+
+.footer__bdr-top {
+    border-top: 1px solid #F4F4F4;
+}
+
+footer {
+    color: white;
+    p {
+        color: white;
+    }
+}
+
 .footer-nav {
     .menu-item {
         &:first-of-type {
