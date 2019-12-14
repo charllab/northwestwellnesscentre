@@ -105,7 +105,7 @@ $nospafooter = [40,42,44];
             <hr>
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
-                    <p class="small mb-50 mb-md-0">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?>  |&nbsp;<a href="<?php echo esc_url(home_url('/')); ?>legalities" class="text-white">Legalities</a></p>
+                    <p class="small mb-50 mb-md-0">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?>  |&nbsp;<a href="<?php echo esc_url(home_url('/legalities')); ?>" class="text-white">Legalities</a></p>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <p class="small mb-0">Designed, Developed and Hosted by <a href="https://sproing.ca" target="_blank"

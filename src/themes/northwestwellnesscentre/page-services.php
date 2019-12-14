@@ -2,9 +2,7 @@
 get_header();
 ?>
 
-<main class="mb-3 mb-lg-4">
-
-    <h1>page-services.php</h1>
+<main class="mb-3 mb-lg-4 sproing-services">
 
     <div class="container py-2">
 
@@ -34,7 +32,7 @@ get_header();
     </div><!-- container -->
 
     <section>
-        <div class="container card-set--blue">
+        <div class="container card-set--blue card-set--servicespage">
             <div class="row justify-content-center">
 
                 <?php
@@ -50,11 +48,11 @@ get_header();
 
                 while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <div class="col-lg-4">
-                        <div class="card">
+                        <div class="card js-featureditem-heightset">
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
-                                <p class="card-text"><?php the_excerpt(); ?></p>
-                                <a class="btn btn-inline" href="<?php echo get_the_permalink($post->ID); ?>">Learn
+                                <?php the_excerpt(); ?>
+                                <a class="btn btn-inline mt-auto" href="<?php echo get_the_permalink($post->ID); ?>">Learn
                                     More
                                     &rarr;</a>
                             </div>

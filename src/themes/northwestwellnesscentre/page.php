@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<main>
+<main class="sproing-page">
 
     <?php if (is_page([187])) : ?>
 
@@ -95,7 +95,7 @@ get_header();
             </div><!-- row -->
         </div><!-- container -->
 
-        <section>
+        <section class="pt-2">
             <div class="container">
                 <div class="row">
                     <div class="col text-center">

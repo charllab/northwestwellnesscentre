@@ -2,9 +2,7 @@
 get_header();
 ?>
 
-<h1>index.php</h1>
-
-<main class="mb-3 mb-lg-4">
+<main class="mt-2 mb-3 mb-lg-4 sproing-index">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 d-md-flex flex-wrap px-0 blogpage-blogblocks">

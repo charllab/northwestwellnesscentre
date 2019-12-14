@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
 }
+
 .bg-general {
     background-color: $general;
 }
@@ -71,7 +72,7 @@ body {
 
 .card {
     border: 0px;
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
     color: $headings-color;
     margin-bottom: $spacer*1.5;
@@ -83,6 +84,8 @@ body {
 
 .card-body {
     padding: $spacer*1.25;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
@@ -90,6 +93,7 @@ body {
     color: inherit;
     margin-bottom: $spacer/2.5;
 }
+
 p {
     font-size: 0.818181818rem;
     line-height: 1.444444444;
@@ -97,11 +101,13 @@ p {
     color: $grey;
 }
 
+
 .card-set--blue {
     .card {
         background-color: $primary;
         color: white;
     }
+
     p {
         color: inherit;
     }
@@ -115,11 +121,14 @@ p {
 }
 
 .card-set--img-bg {
+
     .card {
-        background-color: $headings-color;
+        background: $headings-color url('../images/frontpage-learnmore.jpg') no-repeat center;
+        background-size: cover;
         box-shadow: none;
         color: white;
     }
+
     .card-title,
     .card-text {
         max-width: 552px;
@@ -129,6 +138,7 @@ p {
         color: inherit;
     }
 }
+
 
 // gutenberg styling
 
@@ -175,6 +185,7 @@ article {
             display: block;
         }
     }
+
     .location__info--td {
 
         @include media-breakpoint-up(xs) {
@@ -189,6 +200,7 @@ article {
         }
     }
 }
+
 .location__info--repeater-col {
 
     @include media-breakpoint-down(sm) {
@@ -251,6 +263,7 @@ article {
                 display: none;
             }
         }
+
         span {
             margin-left: $spacer*.025;
             margin-right: $spacer*.25;
@@ -266,7 +279,7 @@ article {
     max-width: 672px;
 
     @include media-breakpoint-up(xxl) {
-        max-width:544px;
+        max-width: 544px;
     }
 }
 

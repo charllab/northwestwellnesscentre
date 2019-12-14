@@ -2,9 +2,7 @@
 get_header();
 ?>
 
-    <h1>single.php</h1>
-
-    <main>
+    <main class="sproing-single">
         <?php
 
         /* Start the Loop */

@@ -4,9 +4,7 @@ get_header();
 
 <main>
 
-    <h1>page-spa.php</h1>
-
-    <div class="container py-2">
+    <div class="container pb-2 sproing-spa">
 
         <div class="row">
             <div class="col-12">

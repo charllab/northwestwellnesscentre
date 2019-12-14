@@ -30,7 +30,7 @@
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
                                 <p class="card-text"><?php the_excerpt(); ?></p>
-                                <a class="btn btn-inline" href="<?php echo get_the_permalink($post->ID); ?>">Learn
+                                <a class="btn btn-inline mt-auto" href="<?php echo get_the_permalink($post->ID); ?>">Learn
                                     More
                                     &rarr;</a>
                             </div>
@@ -103,7 +103,7 @@
                                     services?</h3>
                                 <p class="card-text">Learn about the latest services we are providing our patients
                                     and what to expect with your first visit.</p>
-                                <a class="btn btn-light" href="#">Learn More</a>
+                                <a class="btn btn-light" href="<?php echo esc_url(home_url('/services')); ?>">Learn More</a>
                             </div>
                         </div>
                     </div>

@@ -41,6 +41,7 @@ button, .btn {
     min-width: auto;
     padding: 0;
     color: $body-color;
+    align-self: start;
 }
 .card-set--blue {
     .card .btn-inline,
@@ -53,3 +54,4 @@ button, .btn {
     background-color: #fff;
     color: $headings-color;
 }
+

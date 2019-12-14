@@ -25,7 +25,7 @@
                                     <div class="card-body">
                                         <h3 class="card-title"><?php the_title(); ?></h3>
                                         <?php the_excerpt(); ?>
-                                        <a class="btn btn-inline" href="<?php the_permalink(); ?>">Learn More
+                                        <a class="btn btn-inline mt-auto" href="<?php the_permalink(); ?>">Learn More
                                             &rarr;</a>
                                     </div>
                                 </div>
