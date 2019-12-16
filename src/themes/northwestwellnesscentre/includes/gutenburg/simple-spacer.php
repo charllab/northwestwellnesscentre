@@ -20,8 +20,31 @@ if (!empty($block['anchor'])) {
 
 <?php else: ?>
 
-    <section class="alignfull pb-<?php the_field('simple_mobilespacer'); ?> pb-lg-<?php the_field('simple_desktopspacer'); ?>"></section>
+    <style>
+        <?php if (get_field('simple_mobilespacer')): ?>
+        @media only screen and (max-width: 991.5px) {
+            .mobile-spacer-padding {
+                padding-bottom: <?php the_field('simple_mobilespacer')?>px;
+            }
+        }
 
+        <?php endif; ?>
+        <?php if (get_field('simple_desktopspacer')): ?>
+        @media only screen and (min-width: 992px) {
+            .desktop-spacer-padding {
+                padding-bottom: <?php the_field('simple_desktopspacer')?>px;
+            }
+        }
+
+        <?php endif; ?>
+    </style>
+
+    <section
+    class="alignfull
+        <?php if (get_field('simple_mobilespacer')): ?>mobile-spacer-padding<?php endif; ?>
+        <?php if (get_field('simple_desktopspacer')): ?>desktop-spacer-padding<?php endif; ?>
+        <?php if (get_field('hide_spacer_on_mobile')): ?><?php the_field('hide_spacer_on_mobile'); ?><?php endif; ?>
+    "></section>
     <?php wp_reset_postdata(); ?>
 
 <?php endif; ?>

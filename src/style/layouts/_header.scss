@@ -52,10 +52,15 @@
     }
 
     .dropdown-toggle::after {
-        margin-left: .45rem;
+        position: absolute;
+        border: none;
+        font-size: 0.7rem;
+        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f078";
+        margin-top: 4px;
+        margin-left: 6px;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         .navbar-nav .menu-item.show > .nav-link {
             background: $white;
             color: $body-color;
@@ -63,6 +68,24 @@
 
         .navbar-nav .nav-link {
             padding: 0.4rem 1rem 0.4rem 1rem;
+        }
+
+        .navbar-nav .nav-link.dropdown-toggle {
+            padding-right: 25px;
+        }
+
+        .dropdown>.dropdown-menu {
+            top: 200%;
+            transition: 2s all ease-in-out;
+        }
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+            top: 100%;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
         }
 
         .dropdown-menu {
