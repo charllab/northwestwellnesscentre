@@ -243,6 +243,10 @@ article {
 
 .spa__experience--header {
 
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+    }
+
     @include media-breakpoint-up(lg) {
         max-width: 270px;
     }

@@ -20,6 +20,7 @@ jQuery(function () {
         navContainer: '.owl-nav-outside',
         navText: '',
         stagePadding: 17,
+        autoHeight: true,
         responsive:{
             0: {
                 items:1
