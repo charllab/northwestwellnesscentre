@@ -32,6 +32,11 @@ button, .btn {
         display: block;
     }
 }
+/* Gutenberg frontend display styles for buttons */
+.wp-block-button__link {
+    @extend .btn;
+    background-color: $primary;
+}
 
 .card .btn-inline,
 .btn-inline {

@@ -18,36 +18,41 @@ body {
     margin-right: auto;
 }
 
-/* Gutenber buttons */
+/* Gutenberg CMS display styles for buttons */
 .wp-block-button__link {
-    border-radius: 0;
+    color: white;
+    background-color: #9EB8C8;
     font-weight: 700;
-    text-transform: uppercase;
     font-size: 20px;
-    line-height: 1.2;
-    background-color: red;
-    padding: 21.5px 40px;
+    text-transform: capitalize;
+    line-height: 1.35;
+    padding: 16px 30px;
+    font-size: 0.909090909rem;
+    border-radius: 4px;
 }
+.wp-block-button__link :hover,
+.wp-block-button__link :active {
+     color: #373A3F;
+ }
 .is-style-outline .wp-block-button__link {
-    border-radius: 0;
+    border-radius: 4px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 20px;
-    line-height: 1.2;
-    padding: 21.5px 40px;
-    color: #1C2F44;
+    line-height: 1.35;
+    padding: 16px 30px;
+    color: #9EB8C8;
     background-color: white;
-    border: 3px solid #1C2F44;
+    border: 3px solid #9EB8C8;
 }
 .is-style-full .wp-block-button__link {
-    border-radius: 0;
+    border-radius: 4px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 20px;
-    line-height: 1.2;
-    background-color: #1C2F44;
-    padding: 21.5px 40px;
-    /*width: 100%;*/
+    line-height: 1.35;
+    background-color: #9EB8C8;
+    padding: 16px 30px;
     color: white;
     white-space: normal;
 }
