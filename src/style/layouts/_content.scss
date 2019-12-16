@@ -299,3 +299,21 @@ article {
     left: 0;
 }
 
+
+// cards slider decorative
+
+.slider__decorative {
+    background-color: red;
+    background: url('../images/left-slide-graphic.svg') no-repeat -14% 63%, url('../images/right-slide-graphic.svg') no-repeat 114% 63%;
+
+    @include media-breakpoint-down(xl) {
+        background-size: 40%;
+    }
+    @include media-breakpoint-down(md) {
+        background-position-x: -22%, 122%;
+    }
+    @include media-breakpoint-down(sm) {
+        background: none;
+    }
+}
+

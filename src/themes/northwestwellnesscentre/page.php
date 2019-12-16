@@ -95,17 +95,21 @@ get_header();
             </div><!-- row -->
         </div><!-- container -->
 
-        <section class="pt-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <h2 class="h1">Other Services</h2>
+        <div class="slider__decorative pb-3 pb-lg-4" style="background-position-y: 52%">
+
+            <section class="pt-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="h1">Other Services</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <?php get_template_part('partials/cards/services'); ?>
+            <?php get_template_part('partials/cards/services'); ?>
+
+        </div>
 
     <?php endif; ?>
 

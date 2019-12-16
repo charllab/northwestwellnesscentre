@@ -11,7 +11,7 @@
     button.owl-next,
     button.owl-prev {
         display: inline-block;
-        width: 8%;
+        width: 10%;
         height: 46px;
         background-size: 100% 100%;
         outline: none;
@@ -23,6 +23,10 @@
             display: none;
         }
 
+        @include media-breakpoint-up(xl) {
+            width: 8%;
+        }
+
         @include media-breakpoint-up(xxl) {
             height: 89px;
         }
@@ -30,11 +34,11 @@
     }
 
     button.owl-next {
-        background-image: url('../images/carousel-light-right-arrow.svg');
+        background-image: url('../images/arrow-right-white.svg');
     }
 
     button.owl-prev {
-        background-image: url('../images/carousel-light-left-arrow.svg');
+        background-image: url('../images/arrow-left-white.svg');
     }
 }
 

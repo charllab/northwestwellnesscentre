@@ -1,9 +1,9 @@
-<div class="alignfull pb-3">
+<div class="alignfull">
     <div class="position-relative">
         <div class="owl-nav-outside"></div>
         <div class="container px-sm-4 px-xl-2 px-xxl-1">
-            <div class="row">
-                <div class="col">
+            <div class="row justify-content-center">
+                <div class="col col-lg-11">
                     <div class="owl-carousel owl-theme">
 
                         <?php

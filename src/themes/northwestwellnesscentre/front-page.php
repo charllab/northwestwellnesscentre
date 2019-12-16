@@ -44,18 +44,22 @@
         </div>
     </section>
 
-    <section>
-        <div class="container pt-3">
-            <div class="row">
-                <div class="col text-center">
-                    <h2 class="h1">Additional Core Services</h2>
-                    <p>Browse our additional services that promote optimal healing of the mind, body and spirit.</p>
+    <div class="slider__decorative pb-3 pb-lg-4">
+
+        <section>
+            <div class="container pt-3">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="h1">Additional Core Services</h2>
+                        <p>Browse our additional services that promote optimal healing of the mind, body and spirit.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <?php get_template_part('partials/cards/services'); ?>
+        <?php get_template_part('partials/cards/services'); ?>
+
+    </div>
 
     <section>
         <div class="container">
