@@ -1,5 +1,14 @@
 jQuery(function () {
 
+    // add class for youtube video
+    jQuery('a[href*="youtube.com/watch\?v\="]').addClass('js-btn-video').wrapInner( "<span class='play-btn-text'></span>");;
+
+    // magnificPopup
+    $(document).ready(function() {
+        $('.js-btn-video').magnificPopup({type:'iframe'});
+    });
+
+
     // owl carousel sponsors
     jQuery('.owl-carousel').owlCarousel({
         loop: true,

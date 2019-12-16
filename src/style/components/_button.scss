@@ -61,3 +61,31 @@ button, .btn {
     align-self: start;
 }
 
+.btn.js-btn-video {
+    background-color: $secondary;
+    padding: 0.727272727rem $spacer*2.2 0.727272727rem $spacer;
+}
+.play-btn-text {
+    &::after {
+        content: '';
+        width: $spacer*1.266666667;
+        height: $spacer*1.266666667;
+        background-image: url('../images/play-circle-regular.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        margin-top: -4px;
+        margin-left: 6px;
+    }
+}
+
+.btn.js-btn-video {
+    &:hover,
+    &:active {
+        .play-btn-text {
+            &::after {
+                background-image: url('../images/play-circle-regular-active.svg');
+            }
+        }
+    }
+}
