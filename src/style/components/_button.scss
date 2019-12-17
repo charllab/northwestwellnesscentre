@@ -16,7 +16,7 @@ button, .btn {
 
     &:hover,
     &:active {
-        color: $active;
+        color: white;
     }
 }
 
@@ -76,16 +76,5 @@ button, .btn {
         position: absolute;
         margin-top: -4px;
         margin-left: 6px;
-    }
-}
-
-.btn.js-btn-video {
-    &:hover,
-    &:active {
-        .play-btn-text {
-            &::after {
-                background-image: url('../images/play-circle-regular-active.svg');
-            }
-        }
     }
 }
