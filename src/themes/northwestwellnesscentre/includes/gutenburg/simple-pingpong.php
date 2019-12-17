@@ -28,7 +28,7 @@ $post_objects = get_field('ping_pong_block');
 
         <section class="alignfull mb-2 mb-lg-3">
             <div class="container px-xl-0">
-                <div class="row no-gutters">
+                <div class="row no-gutters align-items-md-center">
                     <div class="col-lg-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-1<?php endif; ?>">
 
                         <img

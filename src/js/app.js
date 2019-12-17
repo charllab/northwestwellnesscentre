@@ -1,11 +1,16 @@
 jQuery(function () {
 
+
+    jQuery('.nav-link').click(function() {
+        jQuery( this ).addClass('clickaroo');
+    });
+
     // add class for youtube video
     jQuery('a[href*="youtube.com/watch\?v\="]').addClass('js-btn-video').wrapInner( "<span class='play-btn-text'></span>");;
 
     // magnificPopup
-    $(document).ready(function() {
-        $('.js-btn-video').magnificPopup({type:'iframe'});
+    jQuery(document).ready(function() {
+        jQuery('.js-btn-video').magnificPopup({type:'iframe'});
     });
 
 
@@ -16,7 +21,7 @@ jQuery(function () {
         nav: true,
         dots: true,
         smartSpeed: 500,
-        autoplay: true,
+        autoplay: false,
         navContainer: '.owl-nav-outside',
         navText: '',
         stagePadding: 17,

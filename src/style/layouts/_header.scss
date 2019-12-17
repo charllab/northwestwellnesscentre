@@ -1,5 +1,8 @@
 .hero-nav-overlay {
 
+    margin-bottom: $top-set-space;
+
+
     .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
         color: $active;
     }
@@ -10,7 +13,7 @@
             border-bottom: 4px solid $quaternary;
         }
 
-        .container  {
+        .container {
             padding: 0 $spacer;
 
             @include media-breakpoint-up(xxl) {
@@ -19,6 +22,10 @@
 
         }
 
+    }
+
+    .navbar-nav {
+        padding: 0;
     }
 
     .navbar-dark .navbar-toggler {
@@ -44,20 +51,31 @@
     .navbar-nav .nav-link {
         color: $white;
         font-weight: 400;
-        font-size: 0.954545455rem;
+        font-size: 1rem;
 
         @include media-breakpoint-up(md) {
             font-weight: 700;
+            font-size: 0.944444444rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 1.166666667rem;
         }
     }
 
+    .dropdown-toggle {
+        display: flex;
+    }
+
     .dropdown-toggle::after {
-        position: absolute;
+        display: block;
         border: none;
-        font-size: 0.7rem;
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f078";
-        margin-top: 4px;
-        margin-left: 6px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        width: auto;
+        height: 15px;
+        margin-top: 1px;
     }
 
     @include media-breakpoint-up(md) {
@@ -66,30 +84,58 @@
             color: $body-color;
         }
 
+        li.active > .nav-link {
+            background: #ACB781;
+        }
+
         .navbar-nav .nav-link {
-            padding: 0.4rem 1rem 0.4rem 1rem;
+            padding: 16.5px 22px;
+
+            &:hover,
+            &:active {
+                background: #ACB781;
+            }
         }
 
-        .navbar-nav .nav-link.dropdown-toggle {
-            padding-right: 34px;
+        .dropdown {
+
+            &:hover,
+            &:active {
+                color: inherit;
+                background: #ACB781;
+            }
         }
 
-        .dropdown>.dropdown-menu {
+
+        .dropdown > .dropdown-menu {
             top: 200%;
             transition: 2s all ease-in-out;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            .nav-link {
+                &:hover,
+                &:active {
+                    color: inherit;
+                    background: rgba(#8B8B8B, .15);
+                }
+            }
         }
-        .dropdown:hover>.dropdown-menu {
+
+        .dropdown:hover > .dropdown-menu {
             display: block;
             top: 100%;
         }
 
-        .dropdown>.dropdown-toggle:active {
+        .dropdown > .dropdown-toggle:active {
             /*Without this, clicking will make it sticky*/
             pointer-events: none;
         }
 
         .dropdown-menu {
-            box-shadow: 3px 5px 10px -6px rgba(0,0,0,0.65);
+            box-shadow: 0px 4px 16px -9px rgba(0, 0, 0, 0.35);
             border-radius: 0;
             border: none;
             right: auto;
@@ -98,20 +144,41 @@
             background: $white;
             width: 260%;
 
+            & > .menu-item {
+                color: #6A6A6A;
+            }
+
             & > .menu-item > .nav-link {
-                padding-left: $spacer*.75;
-                padding-right: $spacer*.75;
+                padding: 8px $spacer*.75;
                 font-family: $font-family-sans-serif;
-                color: $gray-700;
-                font-size: 80%;
+                color: #6A6A6A;
+                font-size: 1.0625rem;
                 font-weight: 400;
             }
+
+            & > .menu-item.active > .nav-link {
+                color: white;
+                &:hover {
+                    cursor: default;
+                    color: white;
+                    background: #ACB781;
+                }
+            }
+            & > .menu-item > .nav-link.clickaroo {color: inherit;}
         }
     }
 
-    @include media-breakpoint-up(xl) {
-        .navbar-nav .nav-link.dropdown-toggle {
-            padding-right: 42px;
+    @include media-breakpoint-up(lg) {
+        .navbar-nav .nav-link {
+            padding: 16.5px 25px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .dropdown > .dropdown-menu {
+            .nav-link {
+                font-size: 0.772727273rem;
+            }
         }
     }
 
@@ -133,7 +200,7 @@
             width: 100%;
             background: transparent;
             border: none;
-            border-left: 2px solid rgba(white,.25);
+            border-left: 2px solid rgba(white, .25);
             margin: 0;
             padding: 0 0 0 .75rem;
 
@@ -149,8 +216,16 @@
 .mainnav-m {
     @include media-breakpoint-up(md) {
         display: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
+
+.sproing-navbar-navmob {
+    padding-top: .75rem;
+    padding-bottom: 1rem;
+}
+
 .social-link {
     cursor: pointer;
     vertical-align: -webkit-baseline-middle;

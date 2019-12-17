@@ -3,11 +3,6 @@
     <div class="header-box">
         <div class="container py-1 py-xxl-0">
             <div class="row justify-content-between align-items-center h-100">
-                <div class="col d-sm-none text-center pb-75">
-                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary">
-                        Book An Appointment
-                    </a>
-                </div>
                 <div class="col-10 col-sm-6">
                     <div class="nav-logo">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
@@ -32,7 +27,7 @@
         </div>
     </div>
 
-    <div class="header-bar bg-quaternary d-none d-md-block">
+    <div class="sproing-navbar-nav header-bar bg-quaternary d-none d-md-block">
         <nav class="navbar navbar-expand-md navbar-dark py-0">
             <div class="container px-0">
                 <div class="row d-none d-md-block w-100 no-gutters">
@@ -40,7 +35,7 @@
                         'theme_location' => 'primary',
                         'container_class' => 'collapse navbar-collapse',
                         'container_id' => 'mainnav',
-                        'menu_class' => 'navbar-nav w-100 d-flex justify-content-center py-75',
+                        'menu_class' => 'navbar-nav w-100 d-flex justify-content-center',
                         'fallback_cb' => '',
                         'menu_id' => 'main-menu',
                         'walker' => new understrap_WP_Bootstrap_Navwalker(),
@@ -50,7 +45,7 @@
         </nav>
     </div>
 
-    <div class="mainnav-m collapse navbar-collapse bg-quaternary">
+    <div class="sproing-navbar-navmob mainnav-m collapse navbar-collapse bg-quaternary">
         <?php wp_nav_menu([
             'theme_location' => 'primary',
             'container_class' => 'container',

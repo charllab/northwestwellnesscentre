@@ -19,17 +19,18 @@
                         $wp_query = new WP_Query($args);
 
                         while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
+                            <a href="<?php the_permalink(); ?>" class="card__link">
                             <div class="item py-1">
                                 <div class="card js-serviceitem-heightset">
                                     <div class="card-body">
-                                        <h3 class="card-title"><?php the_title(); ?></h3>
+                                        <h2 class="card-title mb-50"><?php the_title(); ?></h2>
                                         <?php the_excerpt(); ?>
-                                        <a class="btn btn-inline mt-auto" href="<?php the_permalink(); ?>">Learn More
-                                            &rarr;</a>
+                                        <p class="btn btn-inline mt-auto mb-0">Learn More
+                                            &rarr;</p>
                                     </div>
                                 </div>
                             </div>
+                            </a>
 
                         <?php endwhile; ?>
 

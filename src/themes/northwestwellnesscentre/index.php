@@ -7,6 +7,8 @@ get_header();
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 d-md-flex flex-wrap px-0 blogpage-blogblocks">
 
+                <h1>Our Blog</h1>
+
                 <?php
                 $limit = 10;
 

@@ -89,12 +89,12 @@
 }
 
 @include media-breakpoint-up(md) {
-    .owl-carousel .owl-item > .item {
+    .owl-carousel .owl-item > a.card__link > .item {
         display: flex;
         height: 100%;
     }
 
-    .owl-carousel .owl-item > .item > .card {
+    .owl-carousel .owl-item > a.card__link > .item > .card {
         display: flex;
         width: 100%;
         object-fit: cover;

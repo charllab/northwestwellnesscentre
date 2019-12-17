@@ -4,7 +4,7 @@ get_header();
 
 <main class="mb-3 mb-lg-4 sproing-services">
 
-    <div class="container py-2">
+    <div class="container pb-2">
 
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
@@ -48,15 +48,15 @@ get_header();
 
                 while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                     <div class="col-lg-4">
+                        <a href="<?php echo get_the_permalink($post->ID); ?>" class="card__link">
                         <div class="card js-featureditem-heightset">
                             <div class="card-body">
-                                <h3 class="card-title"><?php echo get_the_title($post->ID); ?></h3>
+                                <h3 class="card-title mb-50"><?php echo get_the_title($post->ID); ?></h3>
                                 <?php the_excerpt(); ?>
-                                <a class="btn btn-inline mt-auto" href="<?php echo get_the_permalink($post->ID); ?>">Learn
-                                    More
-                                    &rarr;</a>
+                                <p class="btn btn-inline mt-auto mb-0">Learn More &rarr;</p>
                             </div>
                         </div>
+                        </a>
                     </div>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata() ?>

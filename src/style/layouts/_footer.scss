@@ -12,6 +12,11 @@ footer {
 
 .footer-nav {
     .menu-item {
+        .nav-link {
+            color: #373A3F;
+            font-size: 0.954545455rem;
+            padding: 12px 1.227272727rem 6px;
+        }
         &:first-of-type {
             .nav-link {
                 padding-left: 0;

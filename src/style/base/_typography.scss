@@ -1,19 +1,13 @@
 // Responsive font sizing
+
 html {
-    font-size: 16px;
-    line-height: 1.454545455;
+    font-size: 18px;
 }
 
 // Sets font size to 16px on form elements to prevent input zoom on mobile devices
 @include media-breakpoint-down(sm) {
     .form-control {
         font-size: $font-size-base * 1.075;
-    }
-}
-
-@include media-breakpoint-up(xxl) {
-    html {
-        font-size: 22px;
     }
 }
 
@@ -24,7 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: $font-family-base;
     -webkit-overflow-scrolling: touch;
-    line-height: 1.4;
+    line-height: 1.444444444;
 }
 
 .small, small {
@@ -36,19 +30,22 @@ body {
 }
 
 .h1, h1 {
-    font-size: 2.272727273rem;
+    font-size: 2rem;
     line-height: 1.2;
     font-weight: 300;
+    @include media-breakpoint-up(lg) {
+        font-size: 2.777777778rem;
+    }
 }
 
 .h2, h2 {
-    font-size: 1.636363636rem;
+    font-size: 2rem;
     line-height: 1.277777778;
     font-weight: 300;
 }
 
 .h3, h3 {
-    font-size: 1.5rem;
+    font-size: 1.444444444rem;
     line-height: 1.272727273;
     font-weight: 400;
 }
@@ -65,7 +62,7 @@ p {
 }
 
 .lead {
-    font-size: 1.272727273rem;
+    font-size: 1.222222222rem;
     line-height: 1.642857143;
 }
 

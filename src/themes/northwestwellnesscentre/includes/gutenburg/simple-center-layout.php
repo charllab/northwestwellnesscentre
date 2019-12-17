@@ -25,7 +25,7 @@ if (!empty($block['anchor'])) {
             <div class="row justify-content-center">
                 <div class="col col-sm-8 text-center">
                     <h2 class="h1"><?php the_field('simple_center_layout_title'); ?></h2>
-                    <p class="mb-0"><?php the_field('simple_center_layout_blurb'); ?></p>
+                    <p class="mb-0 lead"><?php the_field('simple_center_layout_blurb'); ?></p>
                     <?php if (get_field('simple_center_layout_button_text')) : ?>
                         <a href="<?php the_field('simple_center_layout_button_link'); ?>"
                            class="btn btn-primary btn-xs-block mt-150"><?php the_field('simple_center_layout_button_text'); ?></a>

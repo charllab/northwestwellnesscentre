@@ -28,7 +28,7 @@ $post_objects = get_field('team_pong_block');
 
         <section>
             <div class="container px-0">
-                <div class="row justify-content-between align-items-lg-center">
+                <div class="row justify-content-between align-items-md-center">
                     <div class="col-md-5 p-1 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-1<?php endif; ?>">
 
                         <img

@@ -7,7 +7,7 @@ get_header();
     <?php if (is_page([187])) : ?>
 
         <section class="pb-2">
-            <div class="container py-2">
+            <div class="container">
 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -39,7 +39,7 @@ get_header();
     <?php elseif (is_page([42, 44])) : ?>
 
         <section class="pb-2">
-            <div class="container py-2">
+            <div class="container">
 
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
@@ -95,13 +95,14 @@ get_header();
             </div><!-- row -->
         </div><!-- container -->
 
-        <div class="slider__decorative pb-3 pb-lg-4" style="background-position-y: 52%">
+        <div class="slider__decorative pb-3 pb-lg-4">
 
             <section class="pt-2">
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
                             <h2 class="h1">Other Services</h2>
+                            <p class="lead">Browse our additional services that promote optimal healing of the mind, body and spirit.</p>
                         </div>
                     </div>
                 </div>

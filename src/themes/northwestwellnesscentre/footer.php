@@ -1,8 +1,8 @@
 <?php
-$nospafooter = [40,42,44];
+$nospafooter = [99999999999];
 ?>
 
-<?php if (!is_page($nospafooter)) : ?>
+<?php if (is_page($nospafooter)) : ?>
 
     <section class="bg-sand">
         <div class="container-fluid px-md-0 spa__experience--sand">
@@ -59,10 +59,10 @@ $nospafooter = [40,42,44];
 
 <?php endif; ?>
 
-<footer class="<?php if (is_page($nospafooter)) : ?>mt-150 footer__bdr-top<?php endif; ?>">
+<footer class="mt-150 footer__bdr-top">
 
     <div class="container py-1 d-none d-lg-block">
-        <div class="row no-gutters">
+        <div class="row no-gutters align-items-center">
             <div class="col-lg-9">
                 <?php wp_nav_menu([
                     'theme_location' => 'tertiary',
