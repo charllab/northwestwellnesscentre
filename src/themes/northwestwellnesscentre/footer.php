@@ -73,7 +73,7 @@ $nospafooter = [40,42,44];
                 ]); ?>
             </div>
             <div class="col-lg-3 d-flex">
-                <a href="<?php the_sub_field('book_now_link', 'options'); ?>" target="_blank" class="btn btn-primary ml-lg-auto">
+                <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary ml-lg-auto">
                     Book An Appointment
                 </a>
             </div>

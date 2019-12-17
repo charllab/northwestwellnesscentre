@@ -14,10 +14,14 @@ button, .btn {
     padding: 0.727272727rem $spacer;
     font-size: 0.909090909rem;
 
-    &:hover,
-    &:active {
+    &:hover {
         color: white;
     }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle,
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+    color: white;
 }
 
 .banner__block {

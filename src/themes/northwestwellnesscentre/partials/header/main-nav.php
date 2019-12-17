@@ -4,7 +4,7 @@
         <div class="container py-1 py-xxl-0">
             <div class="row justify-content-between align-items-center h-100">
                 <div class="col d-sm-none text-center pb-75">
-                    <a href="" target="_blank" class="btn btn-primary">
+                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary">
                         Book An Appointment
                     </a>
                 </div>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="col-sm-5 col-md-6 col-lg-3 d-none d-sm-block text-right">
-                    <a href="<?php the_sub_field('book_now_link', 'options'); ?>" target="_blank" class="btn btn-primary">
+                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn btn-primary">
                         Book An Appointment
                     </a>
                 </div>

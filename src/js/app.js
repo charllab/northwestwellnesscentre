@@ -80,7 +80,7 @@ jQuery(function () {
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 
     // Auto target _blank external links
-    targetBlankExternalLinks();
+    //targetBlankExternalLinks();
 
     // Remove WP Block element iframe classes
     if (jQuery('.wp-block-embed-youtube').length) {
