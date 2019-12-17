@@ -71,7 +71,7 @@
         }
 
         .navbar-nav .nav-link.dropdown-toggle {
-            padding-right: 25px;
+            padding-right: 34px;
         }
 
         .dropdown>.dropdown-menu {
@@ -106,6 +106,12 @@
                 font-size: 80%;
                 font-weight: 400;
             }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .navbar-nav .nav-link.dropdown-toggle {
+            padding-right: 42px;
         }
     }
 
