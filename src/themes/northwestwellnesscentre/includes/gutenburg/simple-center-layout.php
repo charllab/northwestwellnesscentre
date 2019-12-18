@@ -21,7 +21,7 @@ if (!empty($block['anchor'])) {
 <?php else: ?>
 
     <section class="alignfull">
-        <div class="container pt-2 pb-3">
+        <div class="container pt-2 pb-150 pb-md-3">
             <div class="row justify-content-center">
                 <div class="col col-sm-8 text-center">
                     <h2 class="h1"><?php the_field('simple_center_layout_title'); ?></h2>

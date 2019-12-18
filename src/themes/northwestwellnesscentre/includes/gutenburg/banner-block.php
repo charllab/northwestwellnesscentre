@@ -40,11 +40,11 @@ $id = 'banner-carousel-' . $block['id'];
                                            class="btn btn-primary btn-xs-block"><?php the_sub_field('full_banner_block_single_button_title'); ?></a>
                                     </div>
                                 <?php elseif (get_row_layout() == 'full_banner_block_two_button_layout'): ?>
-                                    <div class="mt-50 <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-xl-6 offset-xl-3'): ?>text-center<?php endif; ?>">
+                                    <div class="mt-3 mt-sm-150 <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-xl-6 offset-xl-3'): ?>text-center<?php endif; ?>">
                                         <a href="<?php the_sub_field('full_banner_block_two_button_layout_first_button_link'); ?>"
-                                           class="btn btn-primary btn-xs-block mb-1 mb-sm-0 mx-sm-50 mt-1"><?php the_sub_field('full_banner_block_two_button_layout_first_button_title'); ?></a>
+                                           class="btn btn-primary btn-xs-block mb-sm-0 mx-sm-50"><?php the_sub_field('full_banner_block_two_button_layout_first_button_title'); ?></a>
                                         <a href="<?php the_sub_field('full_banner_block_two_button_layout_second_button_link'); ?>"
-                                           class="btn btn-secondary btn-xs-block mx-sm-50 mt-1"><?php the_sub_field('full_banner_block_two_button_layout_second_button_title'); ?></a>
+                                           class="btn btn-secondary btn-xs-block mx-sm-50 mt-35 mt-md-0"><?php the_sub_field('full_banner_block_two_button_layout_second_button_title'); ?></a>
                                     </div>
                                 <?php endif; ?>
                             <?php endwhile; ?>

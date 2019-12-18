@@ -19,9 +19,14 @@
         border: none;
         z-index: 9999;
 
-        @include media-breakpoint-down(sm) {
-            display: none;
+        @include media-breakpoint-down(md) {
+            margin-top: -74px;
         }
+
+        @include media-breakpoint-down(xs) {
+            margin-top: -41px;
+        }
+
 
         @include media-breakpoint-up(xl) {
             width: 8%;

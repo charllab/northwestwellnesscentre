@@ -19,13 +19,13 @@ jQuery(function () {
         loop: true,
         margin: 32,
         nav: true,
-        dots: true,
+        dots: false,
         smartSpeed: 500,
         autoplay: false,
         navContainer: '.owl-nav-outside',
         navText: '',
         stagePadding: 17,
-        autoHeight: true,
+        autoHeight: false,
         responsive:{
             0: {
                 items:1

@@ -44,7 +44,7 @@
         </div>
     </section>
 
-    <div class="slider__decorative pb-1 pb-xl-3 mb-lg-50">
+    <div class="slider__decorative pb-0 pb-lg-1 pb-xl-3 mb-lg-50">
 
         <section>
             <div class="container pt-lg-3">
@@ -87,12 +87,12 @@
 
                         <a href="<?php the_permalink(); ?>" class="card__link">
                         <div class="card">
-                            <div class="card-body p-150 pr-lg-25">
+                            <div class="card-body min-height-auto pr-lg-25">
 
                                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                        <h3 class="h2 mb-50"><?php the_title(); ?></h3>
+                                        <h3 class="card-title"><?php the_title(); ?></h3>
                                         <p class="card-text"><?php echo get_excerpt(); ?></p>
-                                        <p class="btn btn-secondary d-none d-md-inline-block text-white">Continue
+                                        <p class="btn btn-secondary d-none d-md-inline-block text-white mb-0">Continue
                                             Reading</p>
                                         <p class="btn btn-inline mt-auto mb-0 d-md-none">Learn More
                                             &rarr;</p>
@@ -108,12 +108,12 @@
                     <div class="card-set--img-bg">
                         <a href="<?php echo esc_url(home_url('/services')); ?>" class="card__link">
                         <div class="card">
-                            <div class="card-body px-lg-3 py-2">
+                            <div class="card-body min-height-auto px-lg-3 py-2">
                                 <h3 class="card-title">Want to learn more about our heath and wellness
                                     services?</h3>
                                 <p class="card-text">Learn about the latest services we are providing our patients
                                     and what to expect with your first visit.</p>
-                                <p class="btn btn-light d-none d-md-block">Learn
+                                <p class="btn btn-light btn-light-flex d-none d-md-inline-block mb-0">Learn
                                     More</p>
                                 <p class="btn btn-inline mt-auto mb-0 d-md-none text-white">Learn More
                                     &rarr;</p>

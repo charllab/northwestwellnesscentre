@@ -62,7 +62,12 @@ button, .btn {
 .btn-light {
     background-color: #fff;
     color: $headings-color;
+}
+
+.btn-light-flex {
     align-self: start;
+    width: auto;
+    margin-right: auto;
 }
 
 .btn.js-btn-video {

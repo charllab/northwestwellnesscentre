@@ -35,6 +35,10 @@ body {
     bottom: 0;
 }
 
+.min-height-auto {
+    min-height: auto !important;
+}
+
 
 .section {
     position: relative;
@@ -98,6 +102,10 @@ a.card__link:hover {
     margin-bottom: $spacer*1.5;
     font-weight: 300;
 
+    @include media-breakpoint-down(sm) {
+        margin-bottom: $spacer;
+    }
+
     .btn {
         min-width: 223px;
     }
@@ -111,12 +119,20 @@ a.card__link:hover {
             padding: $spacer*1.666666667;
         }
 
+        @include media-breakpoint-down(sm) {
+            min-height: 450px;
+        }
+
     }
 
     .card-title {
         @extend h2;
         color: inherit;
         margin-bottom: $spacer/2.5;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.3rem;
+        }
     }
 
     p {
@@ -340,7 +356,12 @@ article {
         background-position-x: -22%, 122%;
     }
     @include media-breakpoint-down(sm) {
-        background: none;
+        background-position-x: -340%, 445%;
+        background-position-y: 76%;
+        background-size: 88%;
+    }
+    @include media-breakpoint-down(xs) {
+        background-position-y: 72%;
     }
 }
 
