@@ -4,7 +4,7 @@ get_header();
 
 <main class="mb-3 mb-lg-4 sproing-services">
 
-    <div class="container pb-2">
+    <div class="container">
 
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
@@ -14,8 +14,6 @@ get_header();
                     yoast_breadcrumb('<p id="breadcrumbs" class="spr-breadcrumb mb-1">', '</p>');
                 }
                 ?>
-
-                <h1 class="text-capitalize"><?php the_title(); ?></h1>
 
                 <?php if (have_posts()) : ?>
 
@@ -42,22 +40,13 @@ get_header();
                     'post_type' => 'page',
                     'orderby' => 'menu_order',
                     'order' => 'ASC',
+                    'posts_per_page' => -1,
                 ];
 
                 $wp_query = new WP_Query($args);
 
                 while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-                    <div class="col-lg-4">
-                        <a href="<?php echo get_the_permalink($post->ID); ?>" class="card__link">
-                        <div class="card js-featureditem-heightset">
-                            <div class="card-body">
-                                <h3 class="card-title mb-50"><?php echo get_the_title($post->ID); ?></h3>
-                                <?php the_excerpt(); ?>
-                                <p class="btn btn-inline mt-auto mb-0">Learn More &rarr;</p>
-                            </div>
-                        </div>
-                        </a>
-                    </div>
+                    <?php get_template_part('partials/cards/bluecards'); ?>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata() ?>
 

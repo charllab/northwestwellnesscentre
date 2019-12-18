@@ -25,7 +25,7 @@
                                     <div class="card-body">
                                         <h2 class="card-title mb-50"><?php the_title(); ?></h2>
                                         <?php the_excerpt(); ?>
-                                        <p class="btn btn-inline mt-auto mb-0 mr-auto text-left">Learn More
+                                        <p class="btn btn-inline mb-0 mr-auto text-left">Learn More
                                             &rarr;</p>
                                     </div>
                                 </div>

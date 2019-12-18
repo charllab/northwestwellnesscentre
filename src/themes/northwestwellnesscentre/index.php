@@ -3,14 +3,14 @@ get_header();
 ?>
 
 <main class="mt-2 mb-3 mb-lg-4 sproing-index">
-    <div class="container">
+    <div class="container mb-2 mb-lg-3">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 d-md-flex flex-wrap px-0 blogpage-blogblocks">
 
                 <h1>Our Blog</h1>
 
                 <?php
-                $limit = 10;
+                $limit = 5;
 
                 $temp = $wp_query;
                 $wp_query = null;
@@ -23,7 +23,7 @@ get_header();
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
                         <div class="blog__block">
-                            <h2 class="mb-250"><?php the_title(); ?></h2>
+                            <h2 class="blog-title mb-250"><?php the_title(); ?></h2>
                             <?php twentynineteen_posted_on(); ?>
                             <p>
                                 <?php the_excerpt(); ?>
@@ -35,13 +35,23 @@ get_header();
                             </p>
 
                         </div>
-                        <hr class="blog__hr my-2 w-100">
+                        <hr class="blog__hr my-150 my-lg-2 w-100">
 
                     </article>
 
                 <?php endwhile; ?>
 
             </div><!-- col -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8 text-center">
+                <nav aria-label="Page navigation">
+                    <?php bootstrap_pagination(); ?>
+                </nav>
+            </div>
         </div>
     </div>
 </main>

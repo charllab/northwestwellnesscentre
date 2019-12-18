@@ -28,21 +28,21 @@ $selection-color: #d9edf7;
 $grid-breakpoints: (
     xxs: 0,
     xs: 568px,
-    sm: 667.5px,
-    md: 767.5px,
-    lg: 991.5px,
-    xl: 1199.5px,
-    xxl: 1439.5px,
-    xxxl: 1679.5px
+    sm: 667.98px,
+    md: 767.98px,
+    lg: 991.98px,
+    xl: 1199.98px,
+    xxl: 1439.98px,
+    xxxl: 1679.98px
 );
 
 $container-max-widths: (
     xxs: 567px,
     xs: 568px,
-    sm: 667.5px,
-    md: 767.5px,
-    lg: 991.5px,
-    xl: 1199.5px,
+    sm: 667.98px,
+    md: 767.98px,
+    lg: 991.98px,
+    xl: 1199.98px,
     xxl: 1404px,
     xxxl: 1640px
 );
@@ -88,4 +88,5 @@ $headings-font-family: $font-family-serif;
 $figure-margin: $spacer * 2.5;
 $matrix-block-margin: $figure-margin;
 
-$top-set-space: $spacer*2.5;
+$top-set-space-mbl: $spacer*1.5;
+$top-set-space-dsk: $spacer*2.5;

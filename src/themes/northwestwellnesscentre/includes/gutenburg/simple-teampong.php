@@ -26,39 +26,39 @@ $post_objects = get_field('team_pong_block');
 
         <?php $thelayout = $post['block_team_image_position']; ?>
 
-        <section>
+        <section class="team-member__block-section pb-md-50 mb-md-1">
             <div class="container px-0">
-                <div class="row justify-content-between align-items-md-center">
-                    <div class="col-md-5 p-1 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-1<?php endif; ?>">
-
-                        <img
-                            src="<?php echo $post['block_team_photo']; ?>"
-                            alt="<?php echo $post['block_team_heading']; ?>"
-                            class="img-fluid d-block d-md-none alignfull"
-                        >
-
-                        <img
-                            src="<?php echo $post['block_team_photo']; ?>"
-                            alt="<?php echo $post['block_team_heading']; ?>"
-                            class="img-fluid d-none d-md-block"
-                        >
-
-                    </div>
-                    <div
-                        class="col-md-7 py-1 mb-1 mb-lg-0 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-0<?php endif; ?>">
-                        <div class="<?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
-                            <h2><?php echo $post['block_team_heading']; ?></h2>
-                            <p><?php echo $post['block_team_blurb']; ?></p>
-                            <?php if ($post['block_team_button_text']): ?>
-                                <a href="<?php echo $post['block_team_button_link']; ?>"
-                                   class=" btn btn-primary btn--flex-clear"
-                                >
-                                    <?php echo $post['block_team_button_text']; ?>
-                                </a>
-                            <?php endif; ?>
-                        </div>
+                <div class="row d-none d-md-block">
+                    <div class="col">
+                        <h2><?php echo $post['block_team_heading']; ?></h2>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img
+                            src="<?php echo $post['block_team_photo']; ?>"
+                            alt="<?php echo $post['block_team_heading']; ?>"
+                            class="img-fluid d-block d-md-none alignfull mb-1"
+                        >
+
+                        <img
+                            src="<?php echo $post['block_team_photo']; ?>"
+                            alt="<?php echo $post['block_team_heading']; ?>"
+                            class="img-fluid w-50 d-none d-md-block mb-50 <?php if ($thelayout == 'image-right-text-left'): ?>float-md-right ml-1<?php endif; ?> <?php if ($thelayout == 'image-left-text-right'): ?>float-md-left mr-1<?php endif; ?>"
+                        >
+                        <h2  class="d-md-none"><?php echo $post['block_team_heading']; ?></h2>
+                        <?php echo $post['block_team_blurb']; ?>
+                        <?php if ($post['block_team_button_text']): ?>
+                            <a href="<?php echo $post['block_team_button_link']; ?>"
+                               class=" btn btn-primary btn--flex-clear"
+                            >
+                                <?php echo $post['block_team_button_text']; ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
             </div>
         </section>
 

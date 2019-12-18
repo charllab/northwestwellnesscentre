@@ -1,6 +1,9 @@
 jQuery(function () {
 
 
+    jQuery('.next.page-link').append('<span> Next</span>');
+    jQuery('.prev.page-link').append('<span> Prev</span>');
+
     jQuery('.nav-link').click(function() {
         jQuery( this ).addClass('clickaroo');
     });

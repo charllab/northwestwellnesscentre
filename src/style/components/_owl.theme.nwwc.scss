@@ -27,6 +27,10 @@
             margin-top: -41px;
         }
 
+        @media (max-width: 374.98px) {
+            margin-top: -11px;
+        }
+
 
         @include media-breakpoint-up(xl) {
             width: 8%;

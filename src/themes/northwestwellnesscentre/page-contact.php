@@ -8,7 +8,7 @@ get_header(); ?>
 
     <main>
 
-        <div class="py-3">
+        <div>
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-lg-6">
@@ -33,9 +33,7 @@ get_header(); ?>
 
 
                     <div class="col-lg-5">
-                        <div class="p-1 pt-md-3 pb-md-2 px-md-2 bg-light">
-                            <h2>Contact Information</h2>
-
+                        <div>
 
                             <div class="row">
                                 <?php
@@ -52,7 +50,7 @@ get_header(); ?>
                                         $otherwebsite = get_sub_field('other_website');
 
                                         ?>
-                                        <div class="col-md-6 col-lg-12 location__info--repeater-col">
+                                        <div class="col-12 location__info--repeater-col p-1 p-md-2 bg-light mb-150">
 
                                             <h5 class="location__info--header"><?php echo get_sub_field('location_name', 'option'); ?></h5>
 

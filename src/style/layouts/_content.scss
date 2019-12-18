@@ -21,7 +21,11 @@ body {
 .banner__block {
     position: relative;
     overflow: hidden;
-    margin-top: -($top-set-space);
+    margin-top: -($top-set-space-mbl);
+
+    @include media-breakpoint-up(lg) {
+        margin-top: -($top-set-space-dsk);
+    }
 }
 
 .banner__color-overlay {
@@ -150,6 +154,12 @@ a.card__link:hover {
     p {
         color: inherit;
     }
+
+    .card-body {
+        @include media-breakpoint-down(sm) {
+            min-height: 0;
+        }
+    }
 }
 
 .card-set--blog {
@@ -190,8 +200,37 @@ a.card__link:hover {
 
 // blog
 
+.page-link.current {
+    z-index: 1;
+    color: #fff;
+    background-color: $primary;
+    border-color: $primary;
+}
+.page-link:focus,
+.page-link:active {
+    box-shadow: none;
+    color: #fff;
+    background-color: #829EAF;
+    border-color: #829EAF;
+}
+
+.blog-title {
+    @include media-breakpoint-down(md) {
+        font-size: 1.5rem;
+    }
+}
+
+.next.page-link,
+.prev.page-link {
+    @include media-breakpoint-down(sm) {
+        span {
+            display: none;
+        }
+    }
+}
+
 .blog__hr {
-    border-top: 1px dashed $secondary;
+    border-top: 1px solid #F4F4F4;;
 }
 
 article {
@@ -241,25 +280,26 @@ article {
 }
 
 .location__info--repeater-col {
+    border-radius: 4px;
 
-    @include media-breakpoint-down(sm) {
-        &:not(:first-of-type) {
-            .location__info--header {
-                border-top: 1px solid rgba($body-color, .25);
-                margin-top: $spacer;
-                padding-top: $spacer;
-            }
-        }
-    }
-    @include media-breakpoint-up(lg) {
-        &:not(:first-of-type) {
-            .location__info--header {
-                border-top: 1px solid rgba($body-color, .25);
-                margin-top: $spacer;
-                padding-top: $spacer;
-            }
-        }
-    }
+    //@include media-breakpoint-down(sm) {
+    //    &:not(:first-of-type) {
+    //        .location__info--header {
+    //            border-top: 1px solid rgba($body-color, .25);
+    //            margin-top: $spacer;
+    //            padding-top: $spacer;
+    //        }
+    //    }
+    //}
+    //@include media-breakpoint-up(lg) {
+    //    &:not(:first-of-type) {
+    //        .location__info--header {
+    //            border-top: 1px solid rgba($body-color, .25);
+    //            margin-top: $spacer;
+    //            padding-top: $spacer;
+    //        }
+    //    }
+    //}
 }
 
 // spa page
@@ -341,6 +381,21 @@ article {
 .spa__experience--corner {
     left: 0;
 }
+// about - team
+
+.team-member__block-section {
+    clear: both;
+    &:not(:last-of-type) {
+        @include media-breakpoint-up(md) {
+            border-bottom: 1px solid #F4F4F4;
+
+            img {
+                border: 1px solid rgba(#ccc, .25);
+            }
+        }
+    }
+}
+
 
 
 // cards slider decorative

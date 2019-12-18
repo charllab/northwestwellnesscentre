@@ -21,11 +21,13 @@ if (!empty($block['anchor'])) {
 <?php else: ?>
 
     <section class="alignfull">
-        <div class="container pt-2 pb-150 pb-md-3">
+        <div class="container pb-2 pb-lg-3">
             <div class="row justify-content-center">
                 <div class="col col-sm-8 text-center">
-                    <h2 class="h1"><?php the_field('simple_center_layout_title'); ?></h2>
-                    <p class="mb-0 lead"><?php the_field('simple_center_layout_blurb'); ?></p>
+                    <h1 class="<?php if (!get_field('simple_center_layout_blurb')) : ?>mb-0<?php endif; ?>"><?php the_field('simple_center_layout_title'); ?></h1>
+                    <?php if (get_field('simple_center_layout_blurb')) : ?>
+                        <p class="mb-0 lead"><?php the_field('simple_center_layout_blurb'); ?></p>
+                    <?php endif; ?>
                     <?php if (get_field('simple_center_layout_button_text')) : ?>
                         <a href="<?php the_field('simple_center_layout_button_link'); ?>"
                            class="btn btn-primary btn-xs-block mt-150"><?php the_field('simple_center_layout_button_text'); ?></a>

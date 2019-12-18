@@ -1,7 +1,10 @@
 .hero-nav-overlay {
 
-    margin-bottom: $top-set-space;
+    margin-bottom: $top-set-space-mbl;
 
+    @include media-breakpoint-up(lg) {
+        margin-bottom: $top-set-space-dsk;
+    }
 
     .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
         color: $active;
