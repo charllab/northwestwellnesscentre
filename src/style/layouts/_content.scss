@@ -420,3 +420,10 @@ article {
     }
 }
 
+.gfield_radio {
+    display: flex;
+
+    .gchoice_1_8_0 {
+        margin-right: $spacer/2 !important;
+    }
+}
