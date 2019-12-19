@@ -82,6 +82,7 @@ body {
 a.card__link {
     text-decoration: none;
 }
+
 a.card__link > .item > .card,
 a.card__link > .card {
     position: relative;
@@ -206,6 +207,7 @@ a.card__link:hover {
     background-color: $primary;
     border-color: $primary;
 }
+
 .page-link:focus,
 .page-link:active {
     box-shadow: none;
@@ -386,10 +388,12 @@ article {
 .spa__experience--corner {
     left: 0;
 }
+
 // about - team
 
 .team-member__block-section {
     clear: both;
+
     &:not(:last-of-type) {
         @include media-breakpoint-up(md) {
             border-bottom: 1px solid #F4F4F4;
@@ -400,7 +404,6 @@ article {
         }
     }
 }
-
 
 
 // cards slider decorative
@@ -434,6 +437,24 @@ article {
 }
 
 // ping me pong
+
+.pingmepong {
+    margin-bottom: $spacer*1.5;
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: $spacer*2;
+    }
+
+}
+
+.sproing-spa .js-ping-instance {
+
+    margin-bottom: $spacer*1.5;
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+    }
+}
 
 img {
     image-rendering: optimize-contrast;

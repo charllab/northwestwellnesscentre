@@ -1,5 +1,12 @@
 jQuery(function () {
 
+    jQuery('.js-ping-instance').each(function() {
+        var vThis = jQuery(this);
+        if (vThis.length == 1) {
+            vThis.last().addClass('pingmepong');
+        }
+    });
+
 
     jQuery('.next.page-link').append('<span> Next</span>');
     jQuery('.prev.page-link').append('<span> Prev</span>');

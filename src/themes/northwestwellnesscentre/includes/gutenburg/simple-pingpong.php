@@ -27,7 +27,7 @@ $post_objects = get_field('ping_pong_block');
         <?php $thelayout = $post['block_image_position']; ?>
 
 
-        <div class="alignfull">
+        <div class="alignfull js-ping-instance">
             <div class="row justify-content-start no-gutters">
                 <div class="col-xl-6">
                     <img

@@ -4,7 +4,7 @@ get_header();
 
 <main>
 
-    <div class="container pb-2 sproing-spa">
+    <div class="container pb-lg-1 sproing-spa">
 
         <div class="row">
             <div class="col-12">
