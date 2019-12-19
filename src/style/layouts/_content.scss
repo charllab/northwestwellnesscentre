@@ -229,6 +229,11 @@ a.card__link:hover {
     }
 }
 
+.wp-block-separator {
+    margin-bottom: $spacer;
+    border-top: 1px solid #F4F4F4;;
+}
+
 .blog__hr {
     border-top: 1px solid #F4F4F4;;
 }

@@ -24,7 +24,7 @@ if (!empty($block['anchor'])) {
         <div class="container pb-2 pb-lg-3">
             <div class="row justify-content-center">
                 <div class="col col-sm-8 text-center">
-                    <h1 class="<?php if (!get_field('simple_center_layout_blurb')) : ?>mb-0<?php endif; ?>"><?php the_field('simple_center_layout_title'); ?></h1>
+                    <h1 class="h1-not-alone<?php if (!get_field('simple_center_layout_blurb')) : ?> mb-0<?php endif; ?>"><?php the_field('simple_center_layout_title'); ?></h1>
                     <?php if (get_field('simple_center_layout_blurb')) : ?>
                         <p class="mb-0 lead"><?php the_field('simple_center_layout_blurb'); ?></p>
                     <?php endif; ?>

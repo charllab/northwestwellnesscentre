@@ -85,3 +85,7 @@ p {
 .list-unstyled {
     margin-bottom: 1rem;
 }
+
+ol, ul {
+    margin-bottom: $spacer;
+}

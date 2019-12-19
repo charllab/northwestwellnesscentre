@@ -6,6 +6,8 @@ get_header();
 
     <?php if (is_page([187])) : ?>
 
+        <!--legalities-->
+
         <section class="pb-2">
             <div class="container">
 
@@ -36,8 +38,40 @@ get_header();
 
         </section>
 
-    <?php elseif (is_page([42])) : ?>
+    <?php elseif (is_page([661])) : ?>
 
+        <section class="pb-2">
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <?php
+                        if (function_exists('yoast_breadcrumb')) {
+                            yoast_breadcrumb('<p id="breadcrumbs" class="spr-breadcrumb mb-1">', '</p>');
+                        }
+                        ?>
+
+                        <?php if (have_posts()) : ?>
+
+                            <?php /* Start the Loop */ ?>
+
+                            <?php while (have_posts()) : the_post(); ?>
+                                <?php the_content(); ?>
+
+                            <?php endwhile; ?>
+
+                        <?php endif; ?>
+                    </div><!-- col -->
+                </div><!-- row -->
+            </div><!-- container -->
+
+        </section>
+
+
+
+    <?php elseif (is_page([42])) : ?>
+        <!--about-->
         <section class="pb-2">
             <div class="container">
 
@@ -71,11 +105,13 @@ get_header();
 
     <?php elseif (is_page([44])) : ?>
 
+        <!--link-->
+
         <section class="pb-2">
             <div class="container">
 
                 <div class="row justify-content-center">
-                    <div class="col-lg-10">
+                    <div class="col-lg-8">
 
                         <?php
                         if (function_exists('yoast_breadcrumb')) {
@@ -105,8 +141,8 @@ get_header();
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
 
                     <?php
                     if (function_exists('yoast_breadcrumb')) {

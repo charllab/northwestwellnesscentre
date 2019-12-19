@@ -53,7 +53,7 @@ $post_objects = get_field('ping_pong_block');
                     <div
                         class="col-lg-6 px-lg-2 px-xl-3 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-0<?php endif; ?>">
                         <div class="<?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
-                            <h2><?php echo $post['block_heading']; ?></h2>
+                            <h2 class="text-capitalize"><?php echo $post['block_heading']; ?></h2>
                             <p><?php echo $post['block_blurb']; ?></p>
                             <?php if ($post['block_button_text']): ?>
                                 <a href="<?php echo $post['block_button_link']; ?>"

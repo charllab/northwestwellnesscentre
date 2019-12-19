@@ -233,6 +233,16 @@ function register_acf_block_types()
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['layout'],
     ]);
+    acf_register_block_type([
+        'name' => 'simple-h1',
+        'title' => __('Sproing h1 Title Block'),
+        'description' => __('Simple Title Block.'),
+        'render_template' => 'includes/gutenburg/simple-headerone.php',
+        'category' => 'formatting',
+        'supports' => array('align' => false),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
 }
 
 if (function_exists('acf_register_block_type')) {
