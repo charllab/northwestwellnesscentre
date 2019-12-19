@@ -432,3 +432,128 @@ article {
         margin-right: $spacer/2 !important;
     }
 }
+
+// ping me pong
+
+img {
+    image-rendering: optimize-contrast;
+}
+
+.img-full {
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    color: inherit;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.img-highlight {
+    height: 50%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-images {
+    overflow: hidden;
+}
+
+.full-image--bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    @include media-breakpoint-down(md) {
+        min-height: 600px;
+        position: relative;
+    }
+}
+
+.left-image--bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        left: 0;
+        right: 55%;
+        bottom: 0;
+        top: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 4rem;
+        margin-top: -4rem;
+        min-height: 600px;
+    }
+}
+
+.right-image--bg {
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        right: 0;
+        left: 60%;
+        bottom: 0;
+        top: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+        min-height: 600px;
+    }
+}
+
+.right-image--bg-full {
+    @include media-breakpoint-up(lg) {
+        left: 50%;
+    }
+}
+
+.left-image--bg-full {
+    @include media-breakpoint-up(lg) {
+        right: 50%;
+    }
+}
+
+.right-images {
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        right: 0;
+        left: 50%;
+        bottom: auto;
+        top: 0;
+    }
+
+    @media (max-width: 1560px) {
+        bottom: 0;
+
+        .img-highlight img {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-top: 3rem;
+
+        .img-highlight img {
+            display: block;
+        }
+    }
+}

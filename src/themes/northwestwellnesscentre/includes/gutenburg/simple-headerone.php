@@ -21,7 +21,7 @@ if (!empty($block['anchor'])) {
 <?php else: ?>
 
     <?php if (get_field('header_one_title')) : ?>
-        <h1 class="text-capitalize text-center mb-25"><?php the_field('header_one_title'); ?></h1>
+        <h1 class="text-capitalize text-center mb-150 mb-lg-25"><?php the_field('header_one_title'); ?></h1>
     <?php endif; ?>
     <?php wp_reset_postdata(); ?>
 

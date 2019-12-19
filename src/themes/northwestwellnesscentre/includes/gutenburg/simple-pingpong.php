@@ -26,47 +26,43 @@ $post_objects = get_field('ping_pong_block');
 
         <?php $thelayout = $post['block_image_position']; ?>
 
-        <section class="alignfull mb-2 mb-lg-3">
-            <div class="container px-xl-0">
-                <div class="row no-gutters align-items-md-center">
-                    <div class="col-lg-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-1<?php endif; ?>">
 
-                        <img
-                            src="<?php echo $post['block_image_mobile']; ?>"
-                            alt="<?php echo $post['block_heading']; ?>"
-                            class="img-fluid d-block d-md-none alignfull mb-2"
-                        >
-
-                        <img
-                            src="<?php echo $post['block_image_mobile']; ?>"
-                            alt="<?php echo $post['block_heading']; ?>"
-                            class="img-fluid d-none d-md-block d-lg-none mb-2"
-                        >
-
-                        <img
-                            src="<?php echo $post['block_image_desktop']; ?>"
-                            alt="<?php echo $post['block_heading']; ?>"
-                            class="img-fluid d-none d-lg-block mx-auto"
-                        >
-
-                    </div>
-                    <div
-                        class="col-lg-6 px-lg-2 px-xl-3 <?php if ($thelayout == 'image-right-text-left'): ?>order-lg-0<?php endif; ?>">
-                        <div class="<?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
-                            <h2 class="text-capitalize"><?php echo $post['block_heading']; ?></h2>
+        <div class="alignfull">
+            <div class="row justify-content-start no-gutters">
+                <div class="col-xl-6">
+                    <img
+                        src="<?php echo $post['block_image_mobile']; ?>"
+                        alt="<?php echo $post['block_heading']; ?>"
+                        class="img-full d-block d-md-none alignfull mb-1"
+                    >
+                    <img
+                        src="<?php echo $post['block_image_desktop']; ?>"
+                        alt="<?php echo $post['block_heading']; ?>"
+                        class="img-full d-none d-md-block d-xl-none mb-1"
+                    >
+                </div>
+            </div>
+            <section class="section">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div
+                            class="d-none d-xl-block<?php if ($thelayout == 'image-right-text-left'): ?> right-image--bg right-image--bg-full order-xl-1<?php endif; ?><?php if ($thelayout == 'image-left-text-right'): ?> left-image--bg left-image--bg-full<?php endif; ?>"
+                            style="background-image: url(<?php echo $post['block_image_desktop']; ?>);"></div>
+                        <div
+                            class="col-xl-6 px-lg-2 px-xl-25 py-xl-2<?php if ($thelayout == 'image-right-text-left'): ?> order-xl-0<?php endif; ?><?php if ($thelayout == 'image-left-text-right'): ?> offset-xl-6<?php endif; ?>">
+                            <h2><?php echo $post['block_heading']; ?></h2>
                             <p><?php echo $post['block_blurb']; ?></p>
                             <?php if ($post['block_button_text']): ?>
-                                <a href="<?php echo $post['block_button_link']; ?>"
-                                   class=" btn btn-primary btn--flex-clear"
-                                >
-                                    <?php echo $post['block_button_text']; ?>
-                                </a>
+                                <a class="btn btn-primary btn--flex-clear"
+                                   href="<?php echo $post['block_button_link']; ?>"
+                                   target="_self"><?php echo $post['block_button_text']; ?></a>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
 
     <?php endforeach; ?>
 
