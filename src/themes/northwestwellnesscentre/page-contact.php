@@ -47,7 +47,7 @@ get_header(); ?>
                                     <?php while (have_rows('location', 'option')): the_row();
 
                                         // vars
-                                        $otherwebsite = get_sub_field('other_website');
+                                        $otherwebsite = get_sub_field('other_website', 'option');
 
                                         ?>
                                         <div class="col-12 location__info--repeater-col p-1 p-md-2 bg-light mb-150">
@@ -82,9 +82,9 @@ get_header(); ?>
                                                     <tr>
                                                         <td class="location__info--blanks">&nbsp;</td>
                                                         <td>
-                                                            <a href="mailto:<?php echo get_field('other_website', 'option'); ?>" class="d-inline-block mt-md-50">
+                                                            <a href="<?php echo get_sub_field('other_website', 'option'); ?>" class="d-inline-block mt-md-50" target="_blank">
                                                                 <strong>Visit <?php echo get_sub_field('location_name', 'option'); ?>
-                                                                    website</strong> <i
+                                                                    Website</strong>&nbsp;<i
                                                                     class="fas fa-external-link-alt"></i></a>
                                                         </td>
                                                     </tr>
