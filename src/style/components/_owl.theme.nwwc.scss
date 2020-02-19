@@ -97,28 +97,45 @@
     }
 }
 
-@include media-breakpoint-up(md) {
-    .owl-carousel .owl-item > a.card__link > .item {
-        display: flex;
-        height: 100%;
+// Exclude Ie styling
+@supports not ((-ms-high-contrast: none) or (-ms-high-contrast: active)) {
+
+    @include media-breakpoint-up(md) {
+        .owl-carousel .owl-item > a.card__link > .item {
+            display: flex;
+            height: 100%;
+        }
+
+        .owl-carousel .owl-item > a.card__link > .item > .card {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+            max-width: initial;
+        }
+
+        .owl-stage {
+            display: flex;
+        }
+
+        .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+        }
     }
 
-    .owl-carousel .owl-item > a.card__link > .item > .card {
-        display: flex;
-        width: 100%;
-        object-fit: cover;
-        max-width: initial;
-    }
+}
 
-    .owl-stage {
-        display: flex;
-    }
+// Ie only styling
 
-    .owl-item {
-        display: flex;
-        flex: 1 0 auto;
+@media all and (-ms-high-contrast: none) {
+
+    @include media-breakpoint-up(md) {
+        .card-title {
+            font-size: 1.6rem !important;
+        }
     }
 }
+
 
 @include media-breakpoint-up(md) {
     .owl-carousel {
