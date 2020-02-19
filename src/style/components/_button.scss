@@ -62,6 +62,12 @@ button, .btn {
 .btn-light {
     background-color: #fff;
     color: $headings-color;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: $headings-color;
+    }
 }
 
 .btn-light-flex {

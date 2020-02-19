@@ -75,7 +75,7 @@
 
                         while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-                        <a href="<?php the_permalink(); ?>" class="card__link">
+                        <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                         <div class="card">
                             <div class="card-body min-height-auto pr-lg-25">
 
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <div class="card-set--img-bg">
-                        <a href="<?php echo esc_url(home_url('/services')); ?>" class="card__link">
+                        <a href="<?php echo esc_url(home_url('/services')); ?>" class="text-decoration-none">
                         <div class="card">
                             <div class="card-body min-height-auto px-lg-3 py-2">
                                 <h3 class="card-title">Want to learn more about our heath and wellness
