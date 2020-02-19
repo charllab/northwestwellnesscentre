@@ -54,8 +54,7 @@ $post_objects = get_field('ping_pong_block');
                             <p><?php echo $post['block_blurb']; ?></p>
                             <?php if ($post['block_button_text']): ?>
                                 <a class="btn btn-primary btn--flex-clear"
-                                   href="<?php echo $post['block_button_link']; ?>"
-                                   target="_self"><?php echo $post['block_button_text']; ?></a>
+                                   href="<?php echo $post['block_button_link']; ?>"><?php echo $post['block_button_text']; ?></a>
                             <?php endif; ?>
                         </div>
                     </div>

@@ -89,3 +89,12 @@ p {
 ol, ul {
     margin-bottom: $spacer;
 }
+
+a.color-inherit {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: inherit;
+    }
+}

@@ -58,7 +58,7 @@
                 <div class="col-lg-5">
                     <div class="d-sm-flex justify-content-between px-250">
                         <h2 class="lead mb-250">Latest Blog Article</h2> <a
-                            href="<?php echo esc_url(home_url('/blog')); ?>" class="btn btn-inline mb-1 mb-sm-0"
+                            href="<?php echo esc_url(home_url('/blog')); ?>" class="btn btn-inline mb-1 mb-sm-0 color-inherit"
                             style="align-self: center;">Visit Blog →</a>
                     </div>
 
