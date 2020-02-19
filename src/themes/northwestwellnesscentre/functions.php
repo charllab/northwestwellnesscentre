@@ -92,7 +92,7 @@ if (!function_exists('custom_after_setup_theme')) {
 /* Misc */
 show_admin_bar(false);
 remove_action('wp_head', 'wp_generator');
-add_filter('login_errors', create_function('$a', "return null;"));
+//add_filter('login_errors', create_function('$a', "return null;"));
 add_filter('allow_dev_auto_core_updates', '__return_false');
 add_filter('auto_update_plugin', '__return_true');
 
