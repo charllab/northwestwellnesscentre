@@ -36,17 +36,18 @@ $post_objects = get_field('team_pong_block');
 
                 <div class="row">
                     <div class="col">
+                        <?php if (!$post['block_team_photo'] == ''): ?>
                         <img
                             src="<?php echo $post['block_team_photo']; ?>"
                             alt="<?php echo $post['block_team_heading']; ?>"
                             class="img-fluid d-block d-md-none alignfull mb-1"
                         >
-
                         <img
                             src="<?php echo $post['block_team_photo']; ?>"
                             alt="<?php echo $post['block_team_heading']; ?>"
                             class="img-fluid w-50 d-none d-md-block mb-50 <?php if ($thelayout == 'image-right-text-left'): ?>float-md-right ml-1<?php endif; ?> <?php if ($thelayout == 'image-left-text-right'): ?>float-md-left mr-1<?php endif; ?>"
                         >
+                        <?php endif; ?>
                         <h2  class="d-md-none"><?php echo $post['block_team_heading']; ?></h2>
                         <?php echo $post['block_team_blurb']; ?>
                         <?php if ($post['block_team_button_text']): ?>
