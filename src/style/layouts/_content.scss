@@ -192,6 +192,22 @@ a.card__link:hover {
 
 // gutenberg styling
 
+.grouped-block {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(lg) {
+
+        max-width: 66.66667%;
+        margin-top: $spacer*2;
+
+        .has-text-align-center {
+            text-align: center;
+        }
+
+    }
+}
+
 .alignfull {
     margin-left: calc(-100vw / 2 + 100% / 2);
     margin-right: calc(-100vw / 2 + 100% / 2);
