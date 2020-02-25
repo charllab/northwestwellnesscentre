@@ -50,13 +50,6 @@ $post_objects = get_field('team_pong_block');
                         <?php endif; ?>
                         <h2  class="d-md-none"><?php echo $post['block_team_heading']; ?></h2>
                         <?php echo $post['block_team_blurb']; ?>
-                        <?php if ($post['block_team_button_text']): ?>
-                            <a href="<?php echo $post['block_team_button_link']; ?>"
-                               class=" btn btn-primary btn--flex-clear"
-                            >
-                                <?php echo $post['block_team_button_text']; ?>
-                            </a>
-                        <?php endif; ?>
                     </div>
                 </div>
 
