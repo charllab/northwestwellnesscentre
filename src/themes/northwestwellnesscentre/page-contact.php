@@ -29,6 +29,37 @@ get_header(); ?>
 
                         <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=10]'); ?>
 
+                        <h3></h3>
+
+                <?php if (have_rows('intake_form')): ?>
+
+                    <?php if (get_field('intakeform_header')): ?>
+                        <h2><?php the_field('intakeform_header'); ?></h2>
+                    <?php endif; ?>
+
+                    <?php if (get_field('intakeform_blurb')): ?>
+                        <?php the_field('intakeform_blurb'); ?>
+                    <?php endif; ?>
+
+                    <ul class="mb-2">
+                    <?php while (have_rows('intake_form')): the_row();?>
+
+                        <li class="intakeform__li">
+                            <a
+                               href="<?php the_sub_field('intakeform_url'); ?>"
+                               title="Download <?php the_sub_field('intakeform_title'); ?>"
+                               target="_blank"
+                               class="intakeform__a"
+                            >
+                            <?php the_sub_field('intakeform_title'); ?>&nbsp;<i class="far fa-file-alt fa-sm"></i>
+                            </a>
+                        </li>
+
+                    <?php endwhile; ?>
+                    </ul>
+                <?php endif; ?>
+
+
                     </div><!-- col -->
 
 
