@@ -421,6 +421,12 @@ article {
     }
 }
 
+.team-img__mxw {
+    @include media-breakpoint-up(xxl) {
+        max-width: 440px;
+    }
+}
+
 
 // cards slider decorative
 
