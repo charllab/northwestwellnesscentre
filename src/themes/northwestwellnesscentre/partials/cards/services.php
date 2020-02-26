@@ -7,13 +7,13 @@
                     <div class="owl-carousel owl-theme">
 
                         <?php
-                        $ids = get_field('featured_services', false, false);
+                        $postid = get_the_ID();
                         $args = [
                             'post_parent' => 21,
                             'post_type' => 'page',
                             'orderby' => 'menu_order',
                             'order' => 'ASC',
-                            'post__not_in' => $ids
+                            'post__not_in' => array($postid)
                         ];
 
                         $wp_query = new WP_Query($args);

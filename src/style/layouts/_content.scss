@@ -28,6 +28,12 @@ body {
     }
 }
 
+.page-template-default.page {
+    h2, .h2 {
+        max-width: 780px;
+    }
+}
+
 .banner__color-overlay {
     position: absolute;
     width: 100%;
@@ -304,25 +310,6 @@ article {
 
 .location__info--repeater-col {
     border-radius: 4px;
-
-    //@include media-breakpoint-down(sm) {
-    //    &:not(:first-of-type) {
-    //        .location__info--header {
-    //            border-top: 1px solid rgba($body-color, .25);
-    //            margin-top: $spacer;
-    //            padding-top: $spacer;
-    //        }
-    //    }
-    //}
-    //@include media-breakpoint-up(lg) {
-    //    &:not(:first-of-type) {
-    //        .location__info--header {
-    //            border-top: 1px solid rgba($body-color, .25);
-    //            margin-top: $spacer;
-    //            padding-top: $spacer;
-    //        }
-    //    }
-    //}
 }
 
 // spa page
