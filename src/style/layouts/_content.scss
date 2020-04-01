@@ -854,3 +854,7 @@ body #gform_wrapper_1 .gfield_error textarea {
         -webkit-transform-origin: 0 0
     }
 }
+
+.wp-block-group {
+    @extend .container;
+}
