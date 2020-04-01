@@ -33,12 +33,12 @@ $id = 'banner-carousel-' . $block['id'];
                             <?php the_field('full_banner_block_title'); ?>
                         </h1>
                         <?php if (get_field('full_banner_block_subtitle')) : ?>
-                            <p class="lead text-white text-center mt-50 mb-1
+                            <div class="lead text-white text-center mt-50 mb-1
                             <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-8 col-xxl-5 offset-xxl-7'): ?> text-lg-left mb-0 mx-50 pr-xxl-4<?php endif; ?>
                             <?php if (get_field('full_banner_block_layout') == 'col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 col-xxl-5'): ?> text-lg-left mb-0 mx-50 pr-xxl-4<?php endif; ?>
                             ">
                                 <?php the_field('full_banner_block_subtitle'); ?>
-                            </p>
+                            </div>
                         <?php endif; ?>
                         <?php if (have_rows('full_banner_block_buttons')):
                             while (have_rows('full_banner_block_buttons')) : the_row();
