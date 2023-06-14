@@ -59,7 +59,7 @@ $nospafooter = [99999999999];
 
 <?php endif; ?>
 
-<footer class="mt-150 footer__bdr-top">
+<footer class="mt-150 footer__bdr-top runcloud">
 
     <div class="container py-1 d-none d-lg-block">
         <div class="row no-gutters align-items-center">
@@ -109,7 +109,7 @@ $nospafooter = [99999999999];
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <p class="small mb-0">Designed, Developed and Hosted by <a href="https://sproing.ca" target="_blank"
-                                                            class="text-white">Sproing&nbsp;Creative</a>
+                                                            class="text-white">Sproing&nbsp;Creative</a>.
                     </p>
                 </div>
             </div>
